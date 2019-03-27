@@ -1,0 +1,12 @@
+wthe chatbot is still too limited
+	sentence generation is not implemented yet
+	noun importantance detection is still basic but works for short sentences
+	might have to place a limit on the sentence size
+	IMPORTANT each input is calculated without storage and backend support
+	
+
+work on sentence generation
+sentence generation requires assistance from the support cloud AI
+the cloud AI needs to be able to analyse the log input file to decide what questions to ask
+make sure the cloud AI is able to affect sentence generation
+create a log file with inputs

@@ -1,0 +1,156 @@
+basic point assignment - def assignPoints(wordStruct)
+basic find whether noun - def find_whether_noun(sentence)
+basic find whether adjective - def find_whether_adjective(word)
+find redundant talk
+	find the most common noun
+	list every noun in dictionary with values of frequency
+track connectors ('and', ',' ,'with')
+find important noun when there are x+1 nouns in sentence
+
+semantic analysis with no data
+	impossible
+	could use atleast a few guidelines
+	is semantics necessary?
+	not yet i think
+
+make verb file
+lemmatize verbs
+
+find redundant talk
+	find the most common noun
+	list every noun in dictionary with values of frequency
+	
+
+
+todays objectives 
+sentence generation
+	1) Question - 
+		a) not knowing enough about a subject matter
+			what is the subject matter ?
+			is there anything in the local tree that will help me decipher the subject matter ?
+				elementary physics
+				user relations
+				personal topics
+				general knowledge
+		b) reconfirming a fact about a subject matter
+			am i aware of the situation im in with the user?
+				user's current mental state
+					rates of positivity and negativity
+						indepth semantic analysis
+			how well do you know about the subject matter?
+		c) just asking for the sake of humor ?
+			what is humor ?
+			what kind of humor is most appropriate?
+		d) just asking for the sake of spontaneous curiosity
+			is there anything relatable to ask about?
+				what are the available relations to ask about
+			just how important is the question?
+			did i ever ask this question from the user before?
+				if so, how many times ?
+			can i guess the current answer on my own?
+				if so, how accurate is it?
+					is it accurate enough to reveal to the user?
+	2) Statement - 
+		a) do i know enough about a subject matter?
+			if so, then what should be the structure of the statement
+				length
+				semantic level
+				percentage of user given definitions
+			if so, then what should be the semantic value of the statement
+				generally positive
+					encouragement
+'					projection of joy
+						for oneself
+						for the user
+				 generally negative
+					dissaproving
+					projection of sadness
+						for oneself
+						for the user
+							be aware of the situation using semantic analysis once again
+			if not, then what kind of statement should i give?
+				generally stable conversation goer
+				be aware of users last input
+					try to reciprocate the intepreted context
+	
+					
+	
+fixing things
+	noun importance - currently taking too much precedence with first noun
+
+currently creating tree object 
+	created a separate class from a separate file that handles all the initialization
+		add_object_node()CORE
+		show_object_nodes()SUPPORT
+		update_object_nodes()CORE - STILL UNDEVELOPED
+	connected the file to 3-14
+		passed input sentence as parameter into treeObject.add_object_node()
+		need to generate unique Object Name from input - FUNCTION CURRENTLY DEVELOPING ############
+		need to generate unique detail name from input - FUNCTION
+		need to generate branch level from input and detail - FUNCTION
+		need to generate personality score - INDEPENDANT FUNCTION 
+		need to generate understanding score - INDEPENDANT FUNCTION
+		need to generate unknown score - INDEPENDANT FUNCTION
+
+	i love cats (only noun and only adjective)
+		create detail under User
+		create object name called Cats and add detail
+		
+	i love cats and dogs (multiple nouns,constructor and only adjective)
+		create detail under User
+			OR
+		update existing detail under User
+		create object name called Cats and add detail
+		create object name called Dogs and add detail
+		
+	i love cats and hate dogs (multiple nouns and corresponding adjectives)
+		create detail under User
+			OR
+		update existing detail under User
+		create object name called Cats and add detail
+		create object name called Dogs and add detail
+	I feel sick
+		create detail under User
+		create object name called sick and add detail
+	
+	Brian is such a mean person
+		create detail under User
+			OR
+		update existing detail under User
+		create object name called Brian and add detail
+			
+	Brian used to be a close friend of mine
+		create detail under User
+			OR
+		update existing detail under User
+		create detail under object name Brian
+			OR
+		update detail under object name Brian
+		create object name called friend and add detail
+		
+got stanfordPOSTagger working :
+	You: where is the academy ?
+	generating object name...
+	[('where', 'WRB'), ('is', 'VBZ'), ('the', 'DT'), ('academy', 'NN'), ('?', '.')]
+
+todays objectives : 
+	RECONFIRM : Are all the support functions ready ? YES BUT WITH SMALL SPECTRUM
+	REVISE : Only record sentences that are not primary greetings or endings - BOTH ARE NOT WORKING
+	REVISE : Chatbot info pushback (highlighting the wrong keyword) use StanfordPOSTagger
+	TARGET : Be Ready for sentence generation by the end of the day
+
+What are the local support functions required for now?
+	1.Length of the sentence DONE
+	3.The fragmentation of a sentence DONE -> array
+	4.The semantic value of a sentence DONE IN BASIC needs larger spectrum
+		added semantic parameter to existing add node function
+		sentiment analysis is working with 4 types of scores
+		using compound score to decide if sentence is positive or negative
+	5.POSTagging - DONE
+	6.check for greetings or endings DONE
+	7.check whether a sentence is a question or a statement DONE IN BASIC
+
+look at Ontology to make data storage and retrieval easier - NOT WORTH THE EFFORT
+
+	
+	

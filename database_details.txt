@@ -1,0 +1,1 @@
+Total rows read : 53800000, Paired rows: 2872761, Time: 2019-03-04 16:12:18.195206

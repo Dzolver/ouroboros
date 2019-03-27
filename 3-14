@@ -1,0 +1,249 @@
+import random
+import operator
+import nltk
+import numpy as np
+
+import treeObjectCreator as PyTree
+import BrainCalculator as PyBrain
+
+from nltk.stem import PorterStemmer
+from nltk.stem import LancasterStemmer
+#-------------------------------------------FILE READING----------------------------------------------------------------
+with open('GreetingWords.txt') as f:
+    Greets = f.read().splitlines()
+with open('GreetingResponses.txt') as g:
+    Responses = g.read().splitlines()
+with open('question_starters.txt') as qt:
+    question_starters = qt.read().splitlines()
+with open('nounlist.txt') as n:
+    Nouns = n.read().splitlines()
+with open('adjectives.txt') as adj:
+    Adjectives = adj.read().splitlines()
+with open('connectors.txt') as conn:
+    Connectors = conn.read().splitlines()
+#-------------------------------------------FILE READING----------------------------------------------------------------
+CSTATUS = '\033[33m'
+COUTPUT = '\33[92m'
+CEND = '\033[0m'
+important_noun = ''
+should_record = True
+sig_max_value = 0
+personal = 0
+maxPos = 0
+#---------------------------------------------CORE FUNCTIONS------------------------------------------------------------
+def createTree():
+    t = open("localTree.txt","w+")
+
+def updateTree():
+    t = open("localTree.txt","w+")
+    #update the tree with new object
+def input_defrag(sentence):
+    wordStruct = []
+    for word in sentence.split(' '):
+        wordStruct.append(word)
+    return wordStruct
+
+def assignPoints(wordStruct):
+    porterStem = PorterStemmer()
+    lancaster = LancasterStemmer()
+    pointList = []
+    nounList = []
+    for word in wordStruct:
+        points = 0
+        if word in Nouns:
+            points += 5
+            nounList.append(word)
+        elif word in question_starters:
+            points += 3
+        elif porterStem.stem(word) in Adjectives:
+            print(porterStem.stem(word))
+            points += 4
+        elif word in Adjectives:
+            print(word)
+            print(CSTATUS + porterStem.stem(word) + ' is the root!' + CEND)
+            points += 4
+        elif word in Connectors:
+            points += 2
+        elif word == '?':
+            points += 1
+        else:
+            points += 0
+        pointList.append(points)
+    print(pointList)
+    find_redundant_noun(nounList)
+    return pointList
+
+def check_for_greetings(sentence):
+    for word in sentence.split(' '):
+        if word.lower() in Greets:
+            return random.choice(Responses)
+        else:
+            sig_max_value = max(assignPoints(input_defrag(sentence)))
+            ##sig_word = find_sig(sig_max_value,assignPoints(input_defrag(sentence)),sentence)
+            sentenceStruct = input_defrag(sentence)
+            sig_word = sentenceStruct[maxPos]
+            #(sig_max_value)
+            if find_whether_adjective(sig_word):
+                print(sig_word + ' is an adjective! ')
+                continue
+            return sig_word + " ? "
+def find_sig_max_value(posTAGs):
+    position = 0
+    personal = 0
+    max = 0
+    maxPos = 0
+    for item in posTAGs:
+        pos = item[0]
+        tag = item[1]
+        points = 0
+        if tag == 'NN':#NOUNS
+            points += 15
+        elif tag == 'JJ':#ADJECTIVES
+            points += 5
+        elif tag == 'PRP$':#NONSELF PERSPECTIVE
+            points +=3
+        elif tag == 'PRP':#SELF PERSPECTIVE
+            points += 5
+            personal += 5
+        elif tag == 'VBP' or tag =='VB':#VERB
+            points +=7
+        elif tag == 'VBD':
+            points += 6
+        elif tag == 'TO':
+            points +=2
+        elif tag == 'DI':
+            points +=1
+        elif tag == 'IN':
+            points +=2
+        elif tag == 'RB': #Example : do you STILL like me ?
+            points +=4
+        else:
+            points = 0
+        points = points + position
+        if (points > max):
+            max = points
+            maxPos = position
+        position +=1
+    return personal,max,maxPos
+
+
+def find_sig(max,pointList,sentence):
+    index = 0;
+    sig_word = ''
+    sentenceStruct = input_defrag(sentence)
+    for point in pointList:
+        if point == max:
+            sig_word = sentenceStruct[index]
+            return sig_word
+        else:
+            index +=1
+
+def create_sentence(pointList,sentence):
+    #use the pointlist to decide what question to ask or sentence to mention
+    #first find out if the question is appropriate or the sentence is needed
+    question = False;
+    if pointList[-1] == 1:
+        question = True
+    else:
+        question = False
+
+#---------------------------------------------CORE FUNCTIONS------------------------------------------------------------
+#--------------------------------------------SUPPORT FUNCTIONS----------------------------------------------------------
+def find_important_noun(sentence):
+    if len(input_defrag(sentence)) <= 2:
+        print('short sentence')
+    elif len(input_defrag(sentence)) > 2:
+        print('long sentence')
+    #find_whether_noun(sentence)
+    ##assignPoints(input_defrag(sentence))
+    #check_question(sentence)
+def find_redundant_noun(listOfWords):
+    uniqueList = {}
+    for word in listOfWords:
+        if word in uniqueList:
+            uniqueList[word] += 1
+        else:
+            uniqueList[word] = 1
+    print(uniqueList)
+    if len(uniqueList) > 0 :
+        important_noun = max(uniqueList.items(), key=operator.itemgetter(1))[0]
+        print(important_noun + ' is the most common noun found!')
+    else:
+        print('no nouns are found!')
+
+def find_whether_connector(word):
+    if word in Connectors:
+        return True
+
+def length_of_input(sentence):
+    count = 0
+    for word in sentence.split(" "):
+        count +=1
+    return count
+
+def find_whether_noun(sentence):
+    for word in sentence.split(' '):
+        if word.lower() in Nouns:
+            print(word + ' is a noun!')
+        else:
+            print(" ")
+
+def find_whether_adjective(word):
+    if word in Adjectives:
+        return True
+    else:
+        return False
+
+def check_question(sentence):
+    segments = []
+    for word in sentence.split(' '):
+        segments.append(word)
+    if segments[-1] == '?':
+        should_record = False
+        print("QUESTION")
+        return True
+    else:
+        should_record = True
+        print("NOT A QUESTION")
+        return False
+#--------------------------------------------SUPPORT FUNCTIONS----------------------------------------------------------
+#------------------------------------------------MAIN FUNCTION----------------------------------------------------------
+if __name__ == '__main__':
+    while True:
+        sentence = input("You: ")
+        if 'bye' in sentence:
+            print('Ouroboros: Good Bye!')
+            break
+
+        object_name = 'TEST'
+        branch_level = 1
+        detail_name = 'Byung'
+        detail_type = 'PERSONAL'
+        personal_score = 0.8
+        understanding_score = 0.9
+        unknown_score = 0.2
+        semantic_score = 0
+        brainiac = PyBrain.BrainCalculator("","",1,0,0,0,sentence,semantic_score)
+        brainiac.generate_object_name("",sentence)
+
+        sentiment_scores = brainiac.generate_semantic_score(sentence)
+        print(CSTATUS+str(brainiac.generate_semantic_score(sentence))+CEND)
+        check_question(sentence)
+        if sentiment_scores['compound']<0:
+            print(CSTATUS+"This is a negative input!"+CEND)
+        elif sentiment_scores['compound']>0:
+            print(CSTATUS+"This is a positive input!"+CEND)
+        else:
+            print(CSTATUS+"This is a neutral input!"+CEND)
+        #find_important_noun(sentence)
+        personal, sig_max_value, maxPos = find_sig_max_value(brainiac.justTAG(sentence))
+        response = check_for_greetings(sentence)
+        #tree_node = np.rec.fromarrays((['TEST',1,'Byung','PERSONAL',sentence,0.8,0.9,0.2]),names=('record_data'))
+
+
+        treeObject = PyTree.TreeObjectCreator(object_name, branch_level, detail_name, detail_type, sentence, personal_score, understanding_score, unknown_score,semantic_score)
+        treeObject.add_object_node(object_name,branch_level,detail_name,detail_type,sentence,personal_score,understanding_score,unknown_score,semantic_score)
+        #treeObject.show_object_nodes()
+        print(COUTPUT + "Ouroboros: " + str(response) + CEND)
+#------------------------------------------------MAIN FUNCTION----------------------------------------------------------
+
