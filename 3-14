@@ -2,7 +2,7 @@ import random
 import operator
 import nltk
 import numpy as np
-
+from sklearn.feature_extraction.text import CountVectorizer
 import treeObjectCreator as PyTree
 import BrainCalculator as PyBrain
 
@@ -30,6 +30,8 @@ should_record = True
 sig_max_value = 0
 personal = 0
 maxPos = 0
+localCandidate = []
+personal_array = []
 #---------------------------------------------CORE FUNCTIONS------------------------------------------------------------
 def createTree():
     t = open("localTree.txt","w+")
@@ -69,7 +71,7 @@ def assignPoints(wordStruct):
         else:
             points += 0
         pointList.append(points)
-    print(pointList)
+    print("FROM assignPoints() : " + str(pointList))
     find_redundant_noun(nounList)
     return pointList
 
@@ -90,14 +92,24 @@ def check_for_greetings(sentence):
 def find_sig_max_value(posTAGs):
     position = 0
     personal = 0
+    maxPersona = 0
+    maxPersonaPos = 0
     max = 0
     maxPos = 0
+    pos = ""
+    list_of_scores = []
     for item in posTAGs:
         pos = item[0]
         tag = item[1]
         points = 0
+        personal = 0
         if tag == 'NN':#NOUNS
             points += 15
+        elif tag == 'NNP':#unidentified pronoun
+            points += 20
+            if str(pos).lower() == 'byung':
+                personal += 5
+                points += personal
         elif tag == 'JJ':#ADJECTIVES
             points += 5
         elif tag == 'PRP$':#NONSELF PERSPECTIVE
@@ -105,8 +117,16 @@ def find_sig_max_value(posTAGs):
         elif tag == 'PRP':#SELF PERSPECTIVE
             points += 5
             personal += 5
-        elif tag == 'VBP' or tag =='VB':#VERB
+            prp = pos.lower()
+            prp_list = ['i','byung']
+            if prp in prp_list:
+                points += 20
+                points += personal
+        elif tag =='VBP':#VERB
             points +=7
+            personal -= 2
+        elif tag == 'VB':
+            points += 7
         elif tag == 'VBD':
             points += 6
         elif tag == 'TO':
@@ -123,8 +143,20 @@ def find_sig_max_value(posTAGs):
         if (points > max):
             max = points
             maxPos = position
+        if (personal > maxPersona):
+            maxPersona = personal
+            maxPersonaPos = position
+        list_of_scores.append([pos,points])
         position +=1
-    return personal,max,maxPos
+        personal_array.append(personal)
+        print(CSTATUS + str(personal_array) + CEND)
+    if(maxPersona >= max):
+        localCandidate.append(str(posTAGs[maxPersonaPos][0]))
+    else:
+        localCandidate.append(str(posTAGs[maxPos][0]))
+    print(posTAGs)
+    detail = sorted(list_of_scores,key=lambda x:x[1],reverse=True)[1][0]
+    return personal,max,maxPos, detail, personal_array
 
 
 def find_sig(max,pointList,sentence):
@@ -224,7 +256,7 @@ if __name__ == '__main__':
         unknown_score = 0.2
         semantic_score = 0
         brainiac = PyBrain.BrainCalculator("","",1,0,0,0,sentence,semantic_score)
-        brainiac.generate_object_name("",sentence)
+
 
         sentiment_scores = brainiac.generate_semantic_score(sentence)
         print(CSTATUS+str(brainiac.generate_semantic_score(sentence))+CEND)
@@ -236,7 +268,14 @@ if __name__ == '__main__':
         else:
             print(CSTATUS+"This is a neutral input!"+CEND)
         #find_important_noun(sentence)
-        personal, sig_max_value, maxPos = find_sig_max_value(brainiac.justTAG(sentence))
+        #calculates and retrieves an initial score for both object and detail candidates
+        personal, sig_max_value, maxPos, detail_name,personal_array = find_sig_max_value(brainiac.justTAG(sentence))
+        print("THIS IS THE LOCAL CANDIDATE " +localCandidate[0])
+        #finalise the primary candidate for the object name
+        prime_candidate = brainiac.generate_object_candidates(sentence, localCandidate[0])
+        personal_score = brainiac.generate_personality_score(personal_array)
+        # prime_detail = brainiac.generate_detail_name(sentence,localCandidate[])
+        object_name = prime_candidate[1]
         response = check_for_greetings(sentence)
         #tree_node = np.rec.fromarrays((['TEST',1,'Byung','PERSONAL',sentence,0.8,0.9,0.2]),names=('record_data'))
 
@@ -245,5 +284,7 @@ if __name__ == '__main__':
         treeObject.add_object_node(object_name,branch_level,detail_name,detail_type,sentence,personal_score,understanding_score,unknown_score,semantic_score)
         #treeObject.show_object_nodes()
         print(COUTPUT + "Ouroboros: " + str(response) + CEND)
+        localCandidate.clear()
+        personal_array.clear()
 #------------------------------------------------MAIN FUNCTION----------------------------------------------------------
 

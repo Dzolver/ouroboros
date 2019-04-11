@@ -1,35 +1,43 @@
-object name 1
-detail name 1,detail type 1,detail raw text 1,personal score 1,understand score 1,unknown score 1
 
-object name 2
-detail name 2,detail type 2,detail raw text 2,personal score 2,understand score 2,unknown score 2
 
-object name 3
-detail name 3,detail type 3,detail raw text 3,personal score 3,understand score 3,unknown score 3
+ObjectName:
+BranchLevel:1,DetailName:pizza,DetailType:PERSONAL,DetailRawText:I like pizza,PersonalScore:0.85,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
 
-ObjectName:TEST
-BranchLevel:1,DetailName:Byung,DetailType:PERSONAL,DetailRawText:i like pizza,PersonalScore:0.8,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
+ObjectName:
+BranchLevel:1,DetailName:pizza,DetailType:PERSONAL,DetailRawText:I like pizza,PersonalScore:0.85,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
 
-ObjectName:TEST
-BranchLevel:1,DetailName:Byung,DetailType:PERSONAL,DetailRawText:i dont like anything,PersonalScore:0.8,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
+ObjectName:
+BranchLevel:1,DetailName:pizza,DetailType:PERSONAL,DetailRawText:I like pizza,PersonalScore:0.85,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
 
-ObjectName:TEST
-BranchLevel:1,DetailName:Byung,DetailType:PERSONAL,DetailRawText:i am you,PersonalScore:0.8,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
+ObjectName:
+BranchLevel:1,DetailName:I,DetailType:PERSONAL,DetailRawText:I like pizza more than I like burgers,PersonalScore:2.45,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
 
-ObjectName:TEST
-BranchLevel:1,DetailName:Byung,DetailType:PERSONAL,DetailRawText:i like pizza ,PersonalScore:0.8,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
+ObjectName:academy
+BranchLevel:1,DetailName:?,DetailType:PERSONAL,DetailRawText:where is the academy ?,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
 
-ObjectName:TEST
-BranchLevel:1,DetailName:Byung,DetailType:PERSONAL,DetailRawText:i like this pizza and that pizza,PersonalScore:0.8,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
+ObjectName:USER
+BranchLevel:1,DetailName:pizza,DetailType:PERSONAL,DetailRawText:Byung likes pizza,PersonalScore:1.25,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
 
-ObjectName:TEST
-BranchLevel:1,DetailName:Byung,DetailType:PERSONAL,DetailRawText:hello,PersonalScore:0.8,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
+ObjectName:
+BranchLevel:1,DetailName:pizza,DetailType:PERSONAL,DetailRawText:I like pizza,PersonalScore:0.85,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
 
-ObjectName:TEST
-BranchLevel:1,DetailName:Byung,DetailType:PERSONAL,DetailRawText:im feeling good today,PersonalScore:0.8,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
+ObjectName:academy
+BranchLevel:1,DetailName:location,DetailType:PERSONAL,DetailRawText:what is the location of the academy ?,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
 
-ObjectName:TEST
-BranchLevel:1,DetailName:Byung,DetailType:PERSONAL,DetailRawText:he used to be a friend of mine,PersonalScore:0.8,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
+ObjectName:
+BranchLevel:1,DetailName:Brian,DetailType:PERSONAL,DetailRawText:Brian thinks John is stupid,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
 
-ObjectName:TEST
-BranchLevel:1,DetailName:Byung,DetailType:PERSONAL,DetailRawText:where is the car ?,PersonalScore:0.8,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
+ObjectName:
+BranchLevel:1,DetailName:today,DetailType:PERSONAL,DetailRawText:I feel sick today,PersonalScore:1.0000000000000002,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
+
+ObjectName:
+BranchLevel:1,DetailName:partner,DetailType:PERSONAL,DetailRawText:I am in love with my partner,PersonalScore:1.45,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
+
+ObjectName:
+BranchLevel:1,DetailName:hate,DetailType:PERSONAL,DetailRawText:I hate roaches,PersonalScore:0.85,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
+
+ObjectName:
+BranchLevel:1,DetailName:dad,DetailType:PERSONAL,DetailRawText:I really miss my dad,PersonalScore:1.2500000000000002,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
+
+ObjectName:
+BranchLevel:1,DetailName:night,DetailType:PERSONAL,DetailRawText:I committed murder last night,PersonalScore:1.7500000000000002,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
