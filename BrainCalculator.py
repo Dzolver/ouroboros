@@ -53,8 +53,10 @@ class BrainCalculator:
         if local_candidate in candidates:
             print(local_candidate + " IS THE OBJECT WE NEED!")
             primary_object_candidate = local_candidate
-        elif str(local_candidate).lower() == 'byung':
+        elif str(local_candidate) == 'Byung' or str(local_candidate) == 'I':
             primary_object_candidate = 'USER'
+        else:
+            primary_object_candidate = local_candidate
         #tfidf_transformer = TfidfTransformer(smooth_idf=True,use_idf=True)
         #tfidf_transformer.fit(word_count_vector)
         #tfidf_vector = tfidf_transformer.transform(cv.transform([wordList]))
@@ -68,7 +70,7 @@ class BrainCalculator:
     def justTAG(self,sentence):
         return st.tag(word_tokenize(sentence))
 
-    #This function is no longer needed, as it is implemented in 3-14.py line 151
+    #This function is no longer needed, as it is implemented in clientChatbotclientChatbot.py line 151
     def generate_detail_name(self,sentence,local_candidate):
         print("generating detail name...")
         wordList = sentence.split(' ')
@@ -108,7 +110,7 @@ class BrainCalculator:
             pos += 1
         return final_p_score
 
-    def generate_understanding_score(self):
+    def generate_fam_score(self):
         print("generating understanding score...")
         return self
 

@@ -1,43 +1,12 @@
-
-
-ObjectName:
-BranchLevel:1,DetailName:pizza,DetailType:PERSONAL,DetailRawText:I like pizza,PersonalScore:0.85,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
-
-ObjectName:
-BranchLevel:1,DetailName:pizza,DetailType:PERSONAL,DetailRawText:I like pizza,PersonalScore:0.85,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
-
-ObjectName:
-BranchLevel:1,DetailName:pizza,DetailType:PERSONAL,DetailRawText:I like pizza,PersonalScore:0.85,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
-
-ObjectName:
-BranchLevel:1,DetailName:I,DetailType:PERSONAL,DetailRawText:I like pizza more than I like burgers,PersonalScore:2.45,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
-
-ObjectName:academy
-BranchLevel:1,DetailName:?,DetailType:PERSONAL,DetailRawText:where is the academy ?,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
-
 ObjectName:USER
-BranchLevel:1,DetailName:pizza,DetailType:PERSONAL,DetailRawText:Byung likes pizza,PersonalScore:1.25,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
+	<detail>BranchLevel:1,DetailName:cows,DetailType:GENERIC,DetailRawText:Byung likes cows,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0.4215</detail>
+	<detail>BranchLevel:1,DetailName:pizza,DetailType:GENERIC,DetailRawText:Byung hates pizza,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:-0.4404</detail>
 
-ObjectName:
-BranchLevel:1,DetailName:pizza,DetailType:PERSONAL,DetailRawText:I like pizza,PersonalScore:0.85,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
+ObjectName:Anne
+	<detail>BranchLevel:1,DetailName:cows,DetailType:GENERIC,DetailRawText:Anne likes cows,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0.4215</detail>
+	<detail>BranchLevel:1,DetailName:pizza,DetailType:GENERIC,DetailRawText:Anne likes pizza,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0.4215</detail>
+	<detail>BranchLevel:1,DetailName:studying,DetailType:GENERIC,DetailRawText:Anne likes studying,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0.4215</detail>
 
-ObjectName:academy
-BranchLevel:1,DetailName:location,DetailType:PERSONAL,DetailRawText:what is the location of the academy ?,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
-
-ObjectName:
-BranchLevel:1,DetailName:Brian,DetailType:PERSONAL,DetailRawText:Brian thinks John is stupid,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
-
-ObjectName:
-BranchLevel:1,DetailName:today,DetailType:PERSONAL,DetailRawText:I feel sick today,PersonalScore:1.0000000000000002,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
-
-ObjectName:
-BranchLevel:1,DetailName:partner,DetailType:PERSONAL,DetailRawText:I am in love with my partner,PersonalScore:1.45,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
-
-ObjectName:
-BranchLevel:1,DetailName:hate,DetailType:PERSONAL,DetailRawText:I hate roaches,PersonalScore:0.85,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
-
-ObjectName:
-BranchLevel:1,DetailName:dad,DetailType:PERSONAL,DetailRawText:I really miss my dad,PersonalScore:1.2500000000000002,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
-
-ObjectName:
-BranchLevel:1,DetailName:night,DetailType:PERSONAL,DetailRawText:I committed murder last night,PersonalScore:1.7500000000000002,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0
+ObjectName:pizza
+	<detail>BranchLevel:1,DetailName:bad,DetailType:GENERIC,DetailRawText:pizza is bad,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:-0.5423</detail>
+	<detail>BranchLevel:1,DetailName:pricey,DetailType:GENERIC,DetailRawText:pizza is pricey,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0.0</detail>

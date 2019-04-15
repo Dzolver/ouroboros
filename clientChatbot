@@ -5,6 +5,8 @@ import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
 import treeObjectCreator as PyTree
 import BrainCalculator as PyBrain
+import os
+import subprocess
 
 from nltk.stem import PorterStemmer
 from nltk.stem import LancasterStemmer
@@ -105,11 +107,10 @@ def find_sig_max_value(posTAGs):
         personal = 0
         if tag == 'NN':#NOUNS
             points += 15
+        elif tag == 'NNS': #NOUNS PLURAL
+            points += 15
         elif tag == 'NNP':#unidentified pronoun
             points += 20
-            if str(pos).lower() == 'byung':
-                personal += 5
-                points += personal
         elif tag == 'JJ':#ADJECTIVES
             points += 5
         elif tag == 'PRP$':#NONSELF PERSPECTIVE
@@ -117,9 +118,8 @@ def find_sig_max_value(posTAGs):
         elif tag == 'PRP':#SELF PERSPECTIVE
             points += 5
             personal += 5
-            prp = pos.lower()
-            prp_list = ['i','byung']
-            if prp in prp_list:
+            prp = pos
+            if prp == 'I':
                 points += 20
                 points += personal
         elif tag =='VBP':#VERB
@@ -252,13 +252,15 @@ if __name__ == '__main__':
         detail_name = 'Byung'
         detail_type = 'PERSONAL'
         personal_score = 0.8
-        understanding_score = 0.9
+        fam_score = 0.9
         unknown_score = 0.2
         semantic_score = 0
         brainiac = PyBrain.BrainCalculator("","",1,0,0,0,sentence,semantic_score)
 
 
         sentiment_scores = brainiac.generate_semantic_score(sentence)
+        print(CSTATUS +str(sentiment_scores['compound'])+CEND)
+        semantic_score = sentiment_scores['compound']
         print(CSTATUS+str(brainiac.generate_semantic_score(sentence))+CEND)
         check_question(sentence)
         if sentiment_scores['compound']<0:
@@ -279,11 +281,30 @@ if __name__ == '__main__':
         response = check_for_greetings(sentence)
         #tree_node = np.rec.fromarrays((['TEST',1,'Byung','PERSONAL',sentence,0.8,0.9,0.2]),names=('record_data'))
 
+        if personal_score <= 0.3:
+            detail_type = 'GENERIC'
+        elif (personal_score > 0.3) & (personal_score < 1.5):
+            detail_type = 'PERSONAL'
+        elif personal_score >= 1.5:
+            detail_type = 'SECRET'
 
-        treeObject = PyTree.TreeObjectCreator(object_name, branch_level, detail_name, detail_type, sentence, personal_score, understanding_score, unknown_score,semantic_score)
-        treeObject.add_object_node(object_name,branch_level,detail_name,detail_type,sentence,personal_score,understanding_score,unknown_score,semantic_score)
+        treeObject = PyTree.TreeObjectCreator(object_name, branch_level, detail_name, detail_type, sentence, personal_score, fam_score, unknown_score,semantic_score)
+        objLineNum,obj_found = treeObject.check_object_node(object_name)
+
+
+        if not obj_found:
+            print("OBJ IS NEW")
+            #detailCount,detailLineNum = treeObject.check_object_details(objLineNum)
+            #print("the amount of details found under this object is " + str(detailCount))
+            treeObject.add_object_node(object_name,branch_level,detail_name,detail_type,sentence,personal_score,fam_score,unknown_score,semantic_score)
+        elif obj_found:
+            count, detailLineNum = treeObject.check_object_details(objLineNum)
+            print(str(count) + " DETAILS FOUND!")
+            print("LAST DETAIL FOUND IN LINE NUMBER " + str(detailLineNum))
+            treeObject.add_detail_node(detailLineNum,branch_level,detail_name,detail_type,sentence,personal_score,fam_score,unknown_score,semantic_score)
         #treeObject.show_object_nodes()
         print(COUTPUT + "Ouroboros: " + str(response) + CEND)
+        #process = subprocess.Popen("sudo gnome-terminal -- python ouroServer.py",stdout = subprocess.PIPE,stderr=None,shell=True)
         localCandidate.clear()
         personal_array.clear()
 #------------------------------------------------MAIN FUNCTION----------------------------------------------------------
