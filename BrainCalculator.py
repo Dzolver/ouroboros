@@ -10,7 +10,7 @@ os.environ['CLASSPATH'] = "stanford-pos"
 os.environ['STANFORD_MODELS'] = "stanford-pos"
 _path_to_model = 'stanfordPOSTagger/models/english-bidirectional-distsim.tagger'
 _path_to_jar = 'stanfordPOSTagger/stanford-postagger.jar'
-
+_path_to_tree = 'localTree.txt'
 from nltk.tag import StanfordPOSTagger
 
 st = StanfordPOSTagger(_path_to_model,_path_to_jar,encoding='utf8')
@@ -88,6 +88,10 @@ class BrainCalculator:
         print("generating branch level...")
         return self
 
+    def getSentenceLength(self,sentence):
+        words = sentence.split(" ")
+        return len(words)
+
     def generate_personality_score(self,personal_array):
         print("generating personality score...")
         #calculations to deem personal score based on initial score values and position
@@ -97,29 +101,273 @@ class BrainCalculator:
         #length of sentence, position of scores, scores itself
         for p_score in personal_array:
             p_score_pos_array.append(p_score)
-        p_booster_rule = 5.0
-        p_booster = p_booster_rule/len(p_score_pos_array)
         pos = 0
         for p_score_pos in p_score_pos_array:
             print("POINTS : " + str(p_score_pos))
             length = len(p_score_pos_array)
-            balancer = (pos%length/2)
+            offset = (pos%length/2)
             if pos == len(p_score_pos_array) - 1 :
-                balancer = (length/2)
-            final_p_score += (((pos * -1) + length/2 + 1 + balancer) *0.1* p_score_pos)
+                offset = (length/2)
+            final_p_score += (((pos * -1) + length/2 + 1 + offset) * 0.1 * p_score_pos)
             pos += 1
         return final_p_score
 
-    def generate_fam_score(self):
+    #The more references, the better.
+    def generate_fam_score(self, sentence):
         print("generating understanding score...")
-        return self
+        fam_score = -5
+        offset = 0
+        with open(_path_to_tree,'r') as t:
+            lines = t.readlines()
+            for component in sentence.split(" "):
+                for line in lines:
+                    for micro_line in line.split(":"):
+                        if component in line:
+                            offset += 1
+        fam_score = fam_score + offset/4
+        t.close()
+        return fam_score
 
-    def generate_unknown_score(self):
+    def generate_unknown_score(self,detail,detail_array):
+        unknown_score = 10
+        count = 0
+        offset = 0
         print("generating unknown score...")
-        return self
+        lineNum, object_presence = self.check_object_node(detail)
+        if object_presence == True:
+            offset = 2
+            object_presence_detail_count, detailLineNum, object_presence_detail_array = self.check_object_details(lineNum)
+            offset = offset*object_presence_detail_count
 
-    def generate_semantic_score(self,sentence):
+        if len(detail_array) == 0:
+            count = 0
+        else:
+            for detail_node in detail_array:
+                if detail_node == detail:
+                    count += 1
+
+        unknown_score = unknown_score - (offset + count * 1.5)
+        return unknown_score
+
+    def check_object_details(self,objLineNum):
+        detailLineNum = 0 #the last detail line number of that specific object - more efficient than re-iterating
+        count = 0
+        found = False
+        detail_array = []
+        with open("localTree.txt","r") as t:
+            print("checking for object details...")
+            lastDetail = 1
+            for i,line in enumerate(t):
+                if line.strip() and found and i != objLineNum - 2:
+                    detail_name = (self.detailComponentRetriever(2,line.strip())).split(':')[1]
+                    detail_array.append(detail_name)
+                    count += 1
+                    lastDetail = lastDetail + i
+                    print("B LINE NUMBER " + str(i + 1) + " " + line)
+                    detailLineNum += 1
+                    continue
+                if line.strip() and i == objLineNum-2:
+                    found = True
+                    print("Line Number : " + str(objLineNum-1) + " | OBJ FOUND : " + line)
+                    detailLineNum += 1
+                    continue
+                elif not line.strip() and found:
+                    break
+                elif not line.strip() and not found:
+                    detailLineNum += 1
+                    continue
+                elif line.strip() and not found:
+                    detailLineNum += 1
+                    continue
+        print(detail_array)
+        t.close()
+        return count, detailLineNum, detail_array
+
+    def detailComponentRetriever(self,componentNumber,line):
+        component = line.split(',')[componentNumber-1]
+        return component
+
+    def check_object_node(self,object_name):
+        objfound = False
+        with open("localTree.txt","r") as t:
+            target = "ObjectName:" + object_name
+            lineNum = 0
+            for line in t:
+                lineNum += 1
+                if target in str(line):
+                    objfound = True
+                    break
+                else:
+                    objfound = False
+                    continue
+        t.close()
+        if lineNum != 0:
+            lineNum += 1
+        return lineNum,objfound
+
+    def get_object_line(self,object_name):
+        with open("localTree.txt","r") as t:
+            target = "ObjectName:" + object_name
+            line_num = 0
+            for line in t:
+                line_num += 1
+                if target in str(line):
+                    break
+                else:
+                    continue
+        t.close()
+        if line_num != 0:
+            line_num += 1
+        return line_num
+
+    def find_object_node(self, object_name):
+        objfound = False
+        with open("localTree.txt", "r") as t:
+            target = "ObjectName:" + object_name
+            for line in t:
+                if target in str(line):
+                    objfound = True
+                    break
+                else:
+                    objfound = False
+                    continue
+        t.close()
+        return objfound
+
+    def generate_sentiment_score(self,sentence):
         nltk_sentiment = SentimentIntensityAnalyzer()
         sentiment_score = nltk_sentiment.polarity_scores(sentence)
         print("generating semantic score...")
         return sentiment_score
+
+    def remember_details(self,intent,existing_objects):
+        all_details = []
+        for existing_object in existing_objects:
+            count, detail_line_num, detail_array = self.check_object_details(self.get_object_line(existing_object))
+            all_details += detail_array
+        print("ALL DETAILS")
+    def generate_response(self,sentence,object_name,detail_name,question,p_score,f_score,u_score,s_score,detail_array):
+        response = ""
+        object_score = 0
+        detail_score = 0
+        statement_score = 0
+        question_score = 0
+        pronoun_pool = []
+        noun_pool = []
+        adjectives_pool = []
+        connector_pool = []
+        verb_pool=[]
+        past_verb_pool=[]
+        simple_verb_pool=[]
+        VRB_pool=[]
+        rb_pool=[]
+        MD_pool = []
+        WRB_pool = []
+        WP_pool = []
+        if self.find_object_node(object_name):
+            print("Previous object found!")
+            object_score += 1
+
+        for entry in self.justTAG(sentence):
+            pos = entry[0]
+            tag = entry[1]
+            if tag == 'NN':#NOUNS
+                noun_pool.append(pos)
+                continue
+            elif tag == 'NNS': #NOUNS PLURAL
+                noun_pool.append(pos)
+                continue
+            elif tag == 'NNP':#unidentified pronoun
+                pronoun_pool.append(pos)
+                continue
+            elif tag == 'JJ':#ADJECTIVES
+                adjectives_pool.append(pos)
+                continue
+            elif tag =='VBP':#VERB
+                verb_pool.append(pos)
+                continue
+            elif tag == 'VRB':
+                if pos == "do" and question:
+                    WP_pool.append(pos)
+                else:
+                    VRB_pool.append(pos)
+                continue
+            elif tag == 'VB':
+                simple_verb_pool.append(pos)
+                continue
+            elif tag == 'VBD':
+                past_verb_pool.append(pos)
+                continue
+            elif tag == 'VBG':
+                verb_pool.append(pos)
+                continue
+            elif tag == 'VBZ':
+                verb_pool.append(pos)
+                continue
+            elif tag == 'RB': #Example : do you STILL like me ?
+                rb_pool.append(pos)
+                continue
+            elif tag == 'MD':
+                MD_pool.append(pos)
+                continue
+            elif tag == 'WRB':
+                WRB_pool.append(pos)
+                continue
+            elif tag == 'WP':
+                WP_pool.append(pos)
+                continue
+            else:
+                continue
+        print("PRONOUNS " + str(pronoun_pool))
+        print("NOUNS " + str(noun_pool))
+        print("ADJECTIVES " + str(adjectives_pool))
+        print("VERBS " + str(verb_pool))
+        print("SIMPLE VERBS" + str(simple_verb_pool))
+        print("PAST VERBS " +str(past_verb_pool))
+        print("RB " + str(rb_pool))
+        print("VRB " + str(VRB_pool))
+        print("WRB " + str(WRB_pool))
+        print("MD" + str(MD_pool))
+        print("WP " + str(WP_pool))
+        existing_objects=dict()
+        detail_count = 0
+        line_num = 0
+        detail_array = []
+        noun_scores = dict()
+        for word in pronoun_pool:
+            if self.find_object_node(word):
+                total_score = 2
+                detail_count,line_num,detail_array = self.check_object_details(self.get_object_line(word))
+                existing_objects[word] = detail_count
+                if word == object_name:
+                    total_score = total_score*3
+                total_score = total_score * detail_count
+                noun_scores[word] = total_score
+            else:
+                continue
+        for word in noun_pool:
+            if self.find_object_node(word):
+                total_score = 2
+                detail_count,line_num,detail_array = self.check_object_details(self.get_object_line(word))
+                existing_objects[word] = detail_count
+                if word == object_name:
+                    total_score = total_score*3
+                total_score = total_score * detail_count
+                noun_scores[word] = total_score
+        print("Existing objects" + str(existing_objects))
+        if question:
+            #get all segments from wrb,md, wp
+            banana_split = sentence.split(" ")
+            i = len(banana_split)
+            banana_max = 0
+            target_question = ""
+            for word in banana_split:
+                if word in WRB_pool or word in MD_pool or word in WP_pool:
+                    banana_max = i
+                    target_question = word
+                    break
+            print("TARGET QUESTION : " + target_question)
+
+            return response
+        elif not question:
+            return response

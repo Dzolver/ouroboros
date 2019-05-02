@@ -1,12 +1,81 @@
 ObjectName:USER
-	<detail>BranchLevel:1,DetailName:cows,DetailType:GENERIC,DetailRawText:Byung likes cows,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0.4215</detail>
-	<detail>BranchLevel:1,DetailName:pizza,DetailType:GENERIC,DetailRawText:Byung hates pizza,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:-0.4404</detail>
+	<detail>BranchLevel:1,DetailName:mistake,DetailType:PERSONAL,DetailRawText:I think school is a mistake,PersonalScore:1.2999999999999998,FamiliarScore:-5.0,UnknownScore:10.0,SentimentScore:-0.34</detail>
+	<detail>BranchLevel:1,DetailName:dad,DetailType:PERSONAL,DetailRawText:I miss my dad very much,PersonalScore:1.2999999999999998,FamiliarScore:-2.75,UnknownScore:10.0,SentimentScore:-0.1531</detail>
+	<detail>BranchLevel:1,DetailName:pizza,DetailType:PERSONAL,DetailRawText:I ate pizza,PersonalScore:1.25,FamiliarScore:1.75,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:boy,DetailType:SECRET,DetailRawText:I would like to hit the boy,PersonalScore:2.25,FamiliarScore:10.75,UnknownScore:10.0,SentimentScore:0.3612</detail>
+	<detail>BranchLevel:1,DetailName:apples,DetailType:PERSONAL,DetailRawText:I like hitting apples,PersonalScore:1.0000000000000002,FamiliarScore:10.75,UnknownScore:10.0,SentimentScore:0.3612</detail>
+	<detail>BranchLevel:1,DetailName:pizza,DetailType:SECRET,DetailRawText:Should I buy this pizza ?,PersonalScore:1.7500000000000002,FamiliarScore:31.0,UnknownScore:8.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:submit,DetailType:PERSONAL,DetailRawText:why should I submit ?,PersonalScore:1.25,FamiliarScore:46.75,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:wallet,DetailType:SECRET,DetailRawText:I stole from Stanleys wallet ,PersonalScore:1.7500000000000002,FamiliarScore:148.5,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:Brian,DetailType:SECRET,DetailRawText:I met Brian at school just now,PersonalScore:2.25,FamiliarScore:206.75,UnknownScore:6.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:Brian,DetailType:SECRET,DetailRawText:I met Brian at school just now,PersonalScore:2.25,FamiliarScore:222.5,UnknownScore:4.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:sofa,DetailType:SECRET,DetailRawText:When should I buy this sofa ?,PersonalScore:1.7500000000000002,FamiliarScore:109.75,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:money,DetailType:SECRET,DetailRawText:I stole some money yesterday,PersonalScore:1.7500000000000002,FamiliarScore:96.75,UnknownScore:6.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:money,DetailType:SECRET,DetailRawText:I borrowed some money yesterday,PersonalScore:1.7500000000000002,FamiliarScore:101.25,UnknownScore:4.5,SentimentScore:0.0</detail>
+
+ObjectName:tree
+	<detail>BranchLevel:1,DetailName:car,DetailType:GENERIC,DetailRawText:The car hit the tree,PersonalScore:0.0,FamiliarScore:-5.0,UnknownScore:10.0,SentimentScore:0.0</detail>
+
+ObjectName:donkey
+	<detail>BranchLevel:1,DetailName:jumped,DetailType:GENERIC,DetailRawText:The donkey jumped,PersonalScore:0.0,FamiliarScore:-2.75,UnknownScore:10.0,SentimentScore:0.0</detail>
 
 ObjectName:Anne
-	<detail>BranchLevel:1,DetailName:cows,DetailType:GENERIC,DetailRawText:Anne likes cows,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0.4215</detail>
-	<detail>BranchLevel:1,DetailName:pizza,DetailType:GENERIC,DetailRawText:Anne likes pizza,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0.4215</detail>
-	<detail>BranchLevel:1,DetailName:studying,DetailType:GENERIC,DetailRawText:Anne likes studying,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0.4215</detail>
+	<detail>BranchLevel:1,DetailName:mistake,DetailType:GENERIC,DetailRawText:Anne thinks school is a mistake,PersonalScore:0.0,FamiliarScore:21.25,UnknownScore:10.0,SentimentScore:-0.34</detail>
+	<detail>BranchLevel:1,DetailName:time,DetailType:GENERIC,DetailRawText:Anne thinks school is a waste of time,PersonalScore:0.0,FamiliarScore:49.25,UnknownScore:10.0,SentimentScore:-0.4215</detail>
+	<detail>BranchLevel:1,DetailName:time,DetailType:GENERIC,DetailRawText:Anne thinks school is a waste of time,PersonalScore:0.0,FamiliarScore:67.25,UnknownScore:8.5,SentimentScore:-0.4215</detail>
+	<detail>BranchLevel:1,DetailName:time,DetailType:GENERIC,DetailRawText:Anne thinks school is a waste of time,PersonalScore:0.0,FamiliarScore:85.25,UnknownScore:7.0,SentimentScore:-0.4215</detail>
+	<detail>BranchLevel:1,DetailName:school,DetailType:GENERIC,DetailRawText:Anne thinks that the school is bad,PersonalScore:0.0,FamiliarScore:42.75,UnknownScore:10.0,SentimentScore:-0.5423</detail>
 
-ObjectName:pizza
-	<detail>BranchLevel:1,DetailName:bad,DetailType:GENERIC,DetailRawText:pizza is bad,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:-0.5423</detail>
-	<detail>BranchLevel:1,DetailName:pricey,DetailType:GENERIC,DetailRawText:pizza is pricey,PersonalScore:0.0,UnderstandScore:0.9,UnknownScore:0.2,SemanticScore:0.0</detail>
+ObjectName:Manul
+	<detail>BranchLevel:1,DetailName:school,DetailType:GENERIC,DetailRawText:Manul thinks that the school is bad,PersonalScore:0.0,FamiliarScore:46.75,UnknownScore:10.0,SentimentScore:-0.5423</detail>
+	<detail>BranchLevel:1,DetailName:store,DetailType:GENERIC,DetailRawText:Manul stole from the grocery store,PersonalScore:0.0,FamiliarScore:27.5,UnknownScore:10.0,SentimentScore:0.0</detail>
+
+ObjectName:School
+	<detail>BranchLevel:1,DetailName:place,DetailType:GENERIC,DetailRawText:School is a place to learn,PersonalScore:0.0,FamiliarScore:47.0,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:pain,DetailType:GENERIC,DetailRawText:School is a pain,PersonalScore:0.0,FamiliarScore:52.5,UnknownScore:10.0,SentimentScore:-0.5106</detail>
+
+ObjectName:money
+	<detail>BranchLevel:1,DetailName:give,DetailType:SECRET,DetailRawText:Could you give some money ?,PersonalScore:1.7500000000000002,FamiliarScore:-2.75,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:give,DetailType:SECRET,DetailRawText:Can you give some money ?,PersonalScore:1.7500000000000002,FamiliarScore:9.0,UnknownScore:8.5,SentimentScore:0.0</detail>
+
+ObjectName:concert
+	<detail>BranchLevel:1,DetailName:?,DetailType:GENERIC,DetailRawText:When is the concert?,PersonalScore:0.0,FamiliarScore:28.75,UnknownScore:10.0,SentimentScore:0.0</detail>
+
+ObjectName:school
+	<detail>BranchLevel:1,DetailName:?,DetailType:GENERIC,DetailRawText:where is the school ?,PersonalScore:0.0,FamiliarScore:58.0,UnknownScore:10.0,SentimentScore:0.0</detail>
+
+ObjectName:snowman
+	<detail>BranchLevel:1,DetailName:build,DetailType:SECRET,DetailRawText:do you want to build a snowman ?,PersonalScore:2.25,FamiliarScore:72.0,UnknownScore:10.0,SentimentScore:0.0772</detail>
+
+ObjectName:date
+	<detail>BranchLevel:1,DetailName:?,DetailType:GENERIC,DetailRawText:what is the date ?,PersonalScore:0.0,FamiliarScore:53.5,UnknownScore:10.0,SentimentScore:0.0</detail>
+
+ObjectName:father
+	<detail>BranchLevel:1,DetailName:my,DetailType:GENERIC,DetailRawText:who is my father ?,PersonalScore:0.0,FamiliarScore:46.75,UnknownScore:10.0,SentimentScore:0.0</detail>
+
+ObjectName:academy
+	<detail>BranchLevel:1,DetailName:?,DetailType:GENERIC,DetailRawText:where is the academy ?,PersonalScore:0.0,FamiliarScore:69.75,UnknownScore:10.0,SentimentScore:0.0</detail>
+
+ObjectName:John
+	<detail>BranchLevel:1,DetailName:steak,DetailType:GENERIC,DetailRawText:John likes to eat steak,PersonalScore:0.0,FamiliarScore:1.75,UnknownScore:10.0,SentimentScore:0.4215</detail>
+	<detail>BranchLevel:1,DetailName:pizza,DetailType:GENERIC,DetailRawText:John thinks that pizza is expensive,PersonalScore:0.0,FamiliarScore:56.25,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:alcohol,DetailType:GENERIC,DetailRawText:John hates drinking alcohol,PersonalScore:0.0,FamiliarScore:0.0,UnknownScore:10.0,SentimentScore:-0.4404</detail>
+
+ObjectName:Tharindu
+	<detail>BranchLevel:1,DetailName:work,DetailType:GENERIC,DetailRawText:Tharindu is going to work now,PersonalScore:0.0,FamiliarScore:105.75,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:thesis,DetailType:GENERIC,DetailRawText:Tharindu is almost done with his thesis,PersonalScore:0.0,FamiliarScore:40.5,UnknownScore:10.0,SentimentScore:0.0</detail>
+
+ObjectName:Amruth
+	<detail>BranchLevel:1,DetailName:women,DetailType:GENERIC,DetailRawText:Amruth likes chinese women,PersonalScore:0.0,FamiliarScore:-2.75,UnknownScore:10.0,SentimentScore:0.4215</detail>
+	<detail>BranchLevel:1,DetailName:food,DetailType:GENERIC,DetailRawText:Amruth likes chinese food,PersonalScore:0.0,FamiliarScore:4.5,UnknownScore:10.0,SentimentScore:0.4215</detail>
+	<detail>BranchLevel:1,DetailName:kids,DetailType:GENERIC,DetailRawText:Amruth likes chinese kids,PersonalScore:0.0,FamiliarScore:11.25,UnknownScore:10.0,SentimentScore:0.4215</detail>
+
+ObjectName:Brian
+	<detail>BranchLevel:1,DetailName:school,DetailType:GENERIC,DetailRawText:Brian met my teacher at school,PersonalScore:0.0,FamiliarScore:39.75,UnknownScore:8.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:school,DetailType:GENERIC,DetailRawText:Brian met my teacher at school,PersonalScore:0.0,FamiliarScore:53.75,UnknownScore:6.5,SentimentScore:0.0</detail>
+
+ObjectName:time
+	<detail>BranchLevel:1,DetailName:?,DetailType:GENERIC,DetailRawText:What is the time ?,PersonalScore:0.0,FamiliarScore:168.75,UnknownScore:10.0,SentimentScore:0.0</detail>
+
+ObjectName:student
+	<detail>BranchLevel:1,DetailName:Moiz,DetailType:GENERIC,DetailRawText:Moiz is a student ,PersonalScore:0.0,FamiliarScore:244.5,UnknownScore:10.0,SentimentScore:0.0</detail>

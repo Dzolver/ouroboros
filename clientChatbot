@@ -5,11 +5,15 @@ import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
 import treeObjectCreator as PyTree
 import BrainCalculator as PyBrain
+import wishLogCreator as PyWish
 import os
 import subprocess
+import tkinter
 
 from nltk.stem import PorterStemmer
 from nltk.stem import LancasterStemmer
+
+
 #-------------------------------------------FILE READING----------------------------------------------------------------
 with open('GreetingWords.txt') as f:
     Greets = f.read().splitlines()
@@ -91,20 +95,13 @@ def check_for_greetings(sentence):
                 print(sig_word + ' is an adjective! ')
                 continue
             return sig_word + " ? "
-def find_sig_max_value(posTAGs):
-    position = 0
-    personal = 0
-    maxPersona = 0
-    maxPersonaPos = 0
+def find_simple_object(posTAGs):
     max = 0
     maxPos = 0
-    pos = ""
-    list_of_scores = []
     for item in posTAGs:
+        points = 0
         pos = item[0]
         tag = item[1]
-        points = 0
-        personal = 0
         if tag == 'NN':#NOUNS
             points += 15
         elif tag == 'NNS': #NOUNS PLURAL
@@ -117,10 +114,65 @@ def find_sig_max_value(posTAGs):
             points +=3
         elif tag == 'PRP':#SELF PERSPECTIVE
             points += 5
-            personal += 5
             prp = pos
             if prp == 'I':
                 points += 20
+        elif tag =='VBP':#VERB
+            points +=7
+        elif tag == 'VB':
+            points += 7
+        elif tag == 'VBD':
+            points += 6
+        elif tag == 'TO':
+            points +=2
+        elif tag == 'DI':
+            points +=1
+        elif tag == 'IN':
+            points +=2
+        elif tag == 'RB': #Example : do you STILL like me ?
+            points +=4
+        else:
+            points = 0
+        if points > max:
+            max = points
+            maxPos = pos
+    return maxPos
+
+def find_sig_max_value(posTAGs):
+    position = 0
+    personal = 0
+    max_persona = 0
+    max_persona_pos = 0
+    max = 0
+    max_pos = 0
+    list_of_scores = []
+    for item in posTAGs:
+        pos = item[0]
+        tag = item[1]
+        points = 0
+        personal = 0
+        if tag == 'NN':#NOUNS
+            points += 15
+            if brainiac.find_object_node(pos):
+                print("FOUND AN ENTRY!")
+                points += 5
+        elif tag == 'NNS': #NOUNS PLURAL
+            points += 15
+        elif tag == 'NNP':#unidentified pronoun
+            points += 25
+            if brainiac.find_object_node(pos):
+                print("FOUND AN ENTRY!")
+                points += 7
+        elif tag == 'JJ':#ADJECTIVES
+            points += 5
+        elif tag == 'PRP$':#NONSELF PERSPECTIVE
+            points +=3
+        elif tag == 'PRP':#SELF PERSPECTIVE
+            points += 5
+            personal += 5
+            prp = pos
+            if prp == 'I':
+                points += 25
                 points += personal
         elif tag =='VBP':#VERB
             points +=7
@@ -142,21 +194,21 @@ def find_sig_max_value(posTAGs):
         points = points + position
         if (points > max):
             max = points
-            maxPos = position
-        if (personal > maxPersona):
-            maxPersona = personal
-            maxPersonaPos = position
+            max_pos = position
+        if (personal > max_persona):
+            max_persona = personal
+            max_persona_pos = position
         list_of_scores.append([pos,points])
         position +=1
         personal_array.append(personal)
         print(CSTATUS + str(personal_array) + CEND)
-    if(maxPersona >= max):
-        localCandidate.append(str(posTAGs[maxPersonaPos][0]))
+    if(max_persona >= max):
+        localCandidate.append(str(posTAGs[max_persona_pos][0]))
     else:
-        localCandidate.append(str(posTAGs[maxPos][0]))
+        localCandidate.append(str(posTAGs[max_pos][0]))
     print(posTAGs)
     detail = sorted(list_of_scores,key=lambda x:x[1],reverse=True)[1][0]
-    return personal,max,maxPos, detail, personal_array
+    return personal, max, max_pos, detail, personal_array, list_of_scores
 
 
 def find_sig(max,pointList,sentence):
@@ -254,57 +306,78 @@ if __name__ == '__main__':
         personal_score = 0.8
         fam_score = 0.9
         unknown_score = 0.2
-        semantic_score = 0
-        brainiac = PyBrain.BrainCalculator("","",1,0,0,0,sentence,semantic_score)
-
-
-        sentiment_scores = brainiac.generate_semantic_score(sentence)
-        print(CSTATUS +str(sentiment_scores['compound'])+CEND)
-        semantic_score = sentiment_scores['compound']
-        print(CSTATUS+str(brainiac.generate_semantic_score(sentence))+CEND)
-        check_question(sentence)
-        if sentiment_scores['compound']<0:
-            print(CSTATUS+"This is a negative input!"+CEND)
-        elif sentiment_scores['compound']>0:
-            print(CSTATUS+"This is a positive input!"+CEND)
+        sentiment_score = 0
+        brainiac = PyBrain.BrainCalculator("","",1,0,0,0,sentence,sentiment_score)
+        treeObject = PyTree.TreeObjectCreator(object_name, branch_level, detail_name, detail_type, sentence,
+                                              personal_score, fam_score, unknown_score, sentiment_score)
+        detail_array = []
+        objLineNum, obj_found = treeObject.check_object_node(object_name)
+        if brainiac.getSentenceLength(sentence) <= 2:
+            object_name = find_simple_object(brainiac.justTAG(sentence))
+            objLineNum, obj_found = treeObject.check_object_node(object_name)
+            if not obj_found:
+                response = "Can you tell me more about " + object_name + " ? "
+            elif obj_found:
+                response = "What about " + object_name + " ? "
         else:
-            print(CSTATUS+"This is a neutral input!"+CEND)
-        #find_important_noun(sentence)
-        #calculates and retrieves an initial score for both object and detail candidates
-        personal, sig_max_value, maxPos, detail_name,personal_array = find_sig_max_value(brainiac.justTAG(sentence))
-        print("THIS IS THE LOCAL CANDIDATE " +localCandidate[0])
-        #finalise the primary candidate for the object name
-        prime_candidate = brainiac.generate_object_candidates(sentence, localCandidate[0])
-        personal_score = brainiac.generate_personality_score(personal_array)
-        # prime_detail = brainiac.generate_detail_name(sentence,localCandidate[])
-        object_name = prime_candidate[1]
-        response = check_for_greetings(sentence)
-        #tree_node = np.rec.fromarrays((['TEST',1,'Byung','PERSONAL',sentence,0.8,0.9,0.2]),names=('record_data'))
+            personal, sig_max_value, maxPos, detail_name, personal_array, list_of_scores = find_sig_max_value(
+                brainiac.justTAG(sentence))
+            print("THIS IS THE LOCAL CANDIDATE " + localCandidate[0])
+            prime_candidate = brainiac.generate_object_candidates(sentence, localCandidate[0])
+            object_name = prime_candidate[1]
 
-        if personal_score <= 0.3:
-            detail_type = 'GENERIC'
-        elif (personal_score > 0.3) & (personal_score < 1.5):
-            detail_type = 'PERSONAL'
-        elif personal_score >= 1.5:
-            detail_type = 'SECRET'
+            sentiment_scores = brainiac.generate_sentiment_score(sentence)
+            print(CSTATUS +str(sentiment_scores['compound'])+CEND)
+            sentiment_score = sentiment_scores['compound']
+            print(CSTATUS+str(brainiac.generate_sentiment_score(sentence))+CEND)
+            check_question(sentence)
+            if sentiment_scores['compound']<0:
+                print(CSTATUS+"This is a negative input!"+CEND)
+            elif sentiment_scores['compound']>0:
+                print(CSTATUS+"This is a positive input!"+CEND)
+            else:
+                print(CSTATUS+"This is a neutral input!"+CEND)
+            #find_important_noun(sentence)
+            #calculates and retrieves an initial score for both object and detail candidates
 
-        treeObject = PyTree.TreeObjectCreator(object_name, branch_level, detail_name, detail_type, sentence, personal_score, fam_score, unknown_score,semantic_score)
-        objLineNum,obj_found = treeObject.check_object_node(object_name)
+            #finalise the primary candidate for the object name
+
+            personal_score = brainiac.generate_personality_score(personal_array)
+            fam_score = brainiac.generate_fam_score(sentence)
+            # prime_detail = brainiac.generate_detail_name(sentence,localCandidate[])
 
 
-        if not obj_found:
-            print("OBJ IS NEW")
-            #detailCount,detailLineNum = treeObject.check_object_details(objLineNum)
-            #print("the amount of details found under this object is " + str(detailCount))
-            treeObject.add_object_node(object_name,branch_level,detail_name,detail_type,sentence,personal_score,fam_score,unknown_score,semantic_score)
-        elif obj_found:
-            count, detailLineNum = treeObject.check_object_details(objLineNum)
-            print(str(count) + " DETAILS FOUND!")
-            print("LAST DETAIL FOUND IN LINE NUMBER " + str(detailLineNum))
-            treeObject.add_detail_node(detailLineNum,branch_level,detail_name,detail_type,sentence,personal_score,fam_score,unknown_score,semantic_score)
-        #treeObject.show_object_nodes()
+            response = check_for_greetings(sentence)
+            #tree_node = np.rec.fromarrays((['TEST',1,'Byung','PERSONAL',sentence,0.8,0.9,0.2]),names=('record_data'))
+
+            if personal_score <= 0.3:
+                detail_type = 'GENERIC'
+            elif (personal_score > 0.3) & (personal_score < 1.5):
+                detail_type = 'PERSONAL'
+            elif personal_score >= 1.5:
+                detail_type = 'SECRET'
+            objLineNum, obj_found = treeObject.check_object_node(object_name)
+            if not obj_found:
+                print("OBJ IS NEW")
+                #detailCount,detailLineNum = treeObject.check_object_details(objLineNum)
+                #print("the amount of details found under this object is " + str(detailCount))
+                unknown_score = brainiac.generate_unknown_score(detail_name, detail_array)
+                treeObject.add_object_node(object_name,branch_level,detail_name,detail_type,sentence,personal_score,fam_score,unknown_score,sentiment_score)
+            elif obj_found:
+                print(CSTATUS + str(len(sentence)) + CEND)
+                count, detailLineNum, detail_array = treeObject.check_object_details(objLineNum)
+                print(str(count) + " DETAILS FOUND!")
+                print("LAST DETAIL FOUND IN LINE NUMBER " + str(detailLineNum))
+                unknown_score = brainiac.generate_unknown_score(detail_name,detail_array)
+                treeObject.add_detail_node(detailLineNum,branch_level,detail_name,detail_type,sentence,personal_score,fam_score,unknown_score,sentiment_score)
+                wish = PyWish.wishLogCreator(object_name, detail_name, detailLineNum, sentence)
+                wish.update_wish_log(object_name, detail_name, detailLineNum, sentence)
+                #treeObject.show_object_nodes()
+
+        generated_response = brainiac.generate_response(sentence,object_name,detail_name,check_question(sentence),personal_score,fam_score,unknown_score,sentiment_score,detail_array)
         print(COUTPUT + "Ouroboros: " + str(response) + CEND)
         #process = subprocess.Popen("sudo gnome-terminal -- python ouroServer.py",stdout = subprocess.PIPE,stderr=None,shell=True)
+        #clear to get ready for new input
         localCandidate.clear()
         personal_array.clear()
 #------------------------------------------------MAIN FUNCTION----------------------------------------------------------

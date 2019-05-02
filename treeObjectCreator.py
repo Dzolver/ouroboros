@@ -8,7 +8,7 @@ class TreeObjectCreator:
     d_raw_text = ""
     p_score = 0
     fam_score = 0
-    unknown_score = 0
+    unknown_score = 5
     branch_level = 0
     semantic_score = 0
     line_count =[]
@@ -38,15 +38,15 @@ class TreeObjectCreator:
         new_object = ""
         if os.path.getsize('localTree.txt') == 0:
             print("1")
-            new_object = 'ObjectName:' + str(object_name) + '\n\t<detail>BranchLevel:'+str(branch_level)+',DetailName:'+d_name+',DetailType:'+d_type+',DetailRawText:'+d_raw_text+',PersonalScore:'+str(p_score)+',UnderstandScore:'+str(understand_score)+',UnknownScore:'+str(unknown_score)+',SemanticScore:'+str(semantic_score)+'</detail>'
+            new_object = 'ObjectName:' + str(object_name) + '\n\t<detail>BranchLevel:'+str(branch_level)+',DetailName:'+d_name+',DetailType:'+d_type+',DetailRawText:'+d_raw_text+',PersonalScore:'+str(p_score)+',FamiliarScore:'+str(understand_score)+',UnknownScore:'+str(unknown_score)+',SentimentScore:'+str(semantic_score)+'</detail>'
         else:
             print("2")
-            new_object = '\n\n'+'ObjectName:' + str(object_name) + '\n\t<detail>BranchLevel:'+str(branch_level)+',DetailName:'+d_name+',DetailType:'+d_type+',DetailRawText:'+d_raw_text+',PersonalScore:'+str(p_score)+',UnderstandScore:'+str(understand_score)+',UnknownScore:'+str(unknown_score)+',SemanticScore:'+str(semantic_score)+'</detail>'
+            new_object = '\n\n'+'ObjectName:' + str(object_name) + '\n\t<detail>BranchLevel:'+str(branch_level)+',DetailName:'+d_name+',DetailType:'+d_type+',DetailRawText:'+d_raw_text+',PersonalScore:'+str(p_score)+',FamiliarScore:'+str(understand_score)+',UnknownScore:'+str(unknown_score)+',SentimentScore:'+str(semantic_score)+'</detail>'
         with open("localTree.txt","r") as r:
             for i,line in enumerate(r):
                 if i == 0 and not line.strip():
                     print("3")
-                    new_object = '\n\nObjectName:' + str(object_name) + '\n\t<detail>BranchLevel:'+str(branch_level)+',DetailName:'+d_name+',DetailType:'+d_type+',DetailRawText:'+d_raw_text+',PersonalScore:'+str(p_score)+',UnderstandScore:'+str(understand_score)+',UnknownScore:'+str(unknown_score)+',SemanticScore:'+str(semantic_score)+'</detail>'
+                    new_object = '\n\nObjectName:' + str(object_name) + '\n\t<detail>BranchLevel:'+str(branch_level)+',DetailName:'+d_name+',DetailType:'+d_type+',DetailRawText:'+d_raw_text+',PersonalScore:'+str(p_score)+',FamiliarScore:'+str(understand_score)+',UnknownScore:'+str(unknown_score)+',SentimentScore:'+str(semantic_score)+'</detail>'
         with open("localTree.txt","a") as t:
             t.write(new_object)
             t.close()
@@ -76,11 +76,14 @@ class TreeObjectCreator:
         detailLineNum = 0 #the last detail line number of that specific object - more efficient than re-iterating
         count = 0
         found = False
+        detail_array = []
         with open("localTree.txt","r") as t:
             print("checking for object details...")
             lastDetail = 1
             for i,line in enumerate(t):
                 if line.strip() and found and i != objLineNum - 2:
+                    detail_name = (self.detailComponentRetriever(2,line.strip())).split(':')[1]
+                    detail_array.append(detail_name)
                     count += 1
                     lastDetail = lastDetail + i
                     print("B LINE NUMBER " + str(i + 1) + " " + line)
@@ -99,7 +102,13 @@ class TreeObjectCreator:
                 elif line.strip() and not found:
                     detailLineNum += 1
                     continue
-        return count, detailLineNum
+        print(detail_array)
+        t.close()
+        return count, detailLineNum, detail_array
+
+    def detailComponentRetriever(self,componentNumber,line):
+        component = line.split(',')[componentNumber-1]
+        return component
 
     def add_detail_node(self,detailLineNum,branch_level,detail_name,detail_type,sentence,personal_score,fam_score,unknown_score,semantic_score):
         temp = open('temp','w')
@@ -112,8 +121,8 @@ class TreeObjectCreator:
             print("appending details.........")
             attachment = '\t<detail>BranchLevel:' + str(
                 branch_level) + ',DetailName:' + detail_name + ',DetailType:' + detail_type + ',DetailRawText:' + sentence + ',PersonalScore:' + str(
-                personal_score) + ',UnderstandScore:' + str(fam_score) + ',UnknownScore:' + str(
-                unknown_score) + ',SemanticScore:' + str(semantic_score)+"</detail>"
+                personal_score) + ',FamiliarScore:' + str(fam_score) + ',UnknownScore:' + str(
+                unknown_score) + ',SentimentScore:' + str(semantic_score)+"</detail>"
             print(attachment)
 
             for i,line in enumerate(all_lines):

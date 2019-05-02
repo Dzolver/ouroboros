@@ -1,0 +1,12 @@
+{"object_name":"John","detail_name":alcohol,"detail_line_num":54,"raw_text:"John hates drinking alcohol}
+{"object_name":"Tharindu","detail_name":thesis,"detail_line_num":58,"raw_text:"Tharindu is almost done with his thesis}
+{"object_name":"Amruth","detail_name":food,"detail_line_num":62,"raw_text:"Amruth likes chinese food}
+{"object_name":"Amruth","detail_name":kids,"detail_line_num":63,"raw_text:"Amruth likes chinese kids}
+{"object_name":"USER","detail_name":wallet,"detail_line_num":8,"raw_text:"I stole from Stanleys wallet }
+{"object_name":"Brian","detail_name":school,"detail_line_num":68,"raw_text:"Brian met my teacher at school}
+{"object_name":"USER","detail_name":Brian,"detail_line_num":9,"raw_text:"I met Brian at school just now}
+{"object_name":"USER","detail_name":Brian,"detail_line_num":10,"raw_text:"I met Brian at school just now}
+{"object_name":"USER","detail_name":sofa,"detail_line_num":11,"raw_text:"When should I buy this sofa ?}
+{"object_name":"Manul","detail_name":store,"detail_line_num":28,"raw_text:"Manul stole from the grocery store}
+{"object_name":"USER","detail_name":money,"detail_line_num":12,"raw_text:"I stole some money yesterday}
+{"object_name":"USER","detail_name":money,"detail_line_num":13,"raw_text:"I borrowed some money yesterday}
