@@ -41,6 +41,11 @@ class BrainCalculator:
             stop_set = set(m.strip() for m in stopwords)
             return stop_set
 
+    def generate_branch_level(self):
+        print("generating branch level...")
+        return self
+
+    #this function finds the most prominent object in the users input by comparing position and POS Tags
     def generate_object_candidates(self,sentence,local_candidate):
         primary_object_candidate = ""
         print("generating object candidates...")
@@ -65,33 +70,9 @@ class BrainCalculator:
         print(POSTagList)
         for item in POSTagList:
             print(item[0])
-        return self,primary_object_candidate
+        return primary_object_candidate
 
-    def justTAG(self,sentence):
-        return st.tag(word_tokenize(sentence))
-
-    #This function is no longer needed, as it is implemented in clientChatbotclientChatbot.py line 151
-    def generate_detail_name(self,sentence,local_candidate):
-        print("generating detail name...")
-        wordList = sentence.split(' ')
-        stopwords = self.get_stop_words("resources/stopwords.txt")
-        cv = CountVectorizer(max_df=0.85, stop_words=stopwords)
-        word_count_vector = cv.fit_transform(wordList)
-        print(word_count_vector)
-        candidates = list(cv.vocabulary_.keys())[:10]
-        if local_candidate in candidates:
-            print(local_candidate + " IS THE OBJECT WE NEED!")
-            primary_object_candidate = local_candidate
-        return self
-
-    def generate_branch_level(self):
-        print("generating branch level...")
-        return self
-
-    def getSentenceLength(self,sentence):
-        words = sentence.split(" ")
-        return len(words)
-
+    #this function generates the personal score that defines how personal a sentence is, to the user.
     def generate_personality_score(self,personal_array):
         print("generating personality score...")
         #calculations to deem personal score based on initial score values and position
@@ -112,7 +93,7 @@ class BrainCalculator:
             pos += 1
         return final_p_score
 
-    #The more references, the better.
+    #this function generates a score of familiarity based on how many matches are found within the local storage
     def generate_fam_score(self, sentence):
         print("generating understanding score...")
         fam_score = -5
@@ -128,6 +109,7 @@ class BrainCalculator:
         t.close()
         return fam_score
 
+    #this function generates a scsore that acts a metric for the program to know little it knows of a detail
     def generate_unknown_score(self,detail,detail_array):
         unknown_score = 10
         count = 0
@@ -148,6 +130,13 @@ class BrainCalculator:
 
         unknown_score = unknown_score - (offset + count * 1.5)
         return unknown_score
+
+    def justTAG(self,sentence):
+        return st.tag(word_tokenize(sentence))
+
+    def getSentenceLength(self,sentence):
+        words = sentence.split(" ")
+        return len(words)
 
     def check_object_details(self,objLineNum):
         detailLineNum = 0 #the last detail line number of that specific object - more efficient than re-iterating
@@ -246,6 +235,7 @@ class BrainCalculator:
             count, detail_line_num, detail_array = self.check_object_details(self.get_object_line(existing_object))
             all_details += detail_array
         print("ALL DETAILS")
+
     def generate_response(self,sentence,object_name,detail_name,question,p_score,f_score,u_score,s_score,detail_array):
         response = ""
         object_score = 0
@@ -264,6 +254,8 @@ class BrainCalculator:
         MD_pool = []
         WRB_pool = []
         WP_pool = []
+        #multi-dimensional array
+        word_bank = []
         if self.find_object_node(object_name):
             print("Previous object found!")
             object_score += 1
@@ -371,3 +363,32 @@ class BrainCalculator:
             return response
         elif not question:
             return response
+
+    def get_local_memory(self,noun_pool):
+        #for word in noun_pool:
+
+        return self
+
+    def get_server_memory(self):
+        return self
+
+    def has_enough_knowledge(self):
+        return self
+
+    def get_total_memory(self):
+        return self
+
+    def create_word_bank(self):
+        return self
+
+    def connect_components(self):
+        return self
+
+    def component_election(self):
+        return self
+
+    def create_raw_response(self):
+        return self
+
+    def fine_tune_response(self):
+        return self

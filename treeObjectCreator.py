@@ -33,28 +33,40 @@ class TreeObjectCreator:
             count+=1
             print("OBJECT ENTRY " + str(count) + " : \n" + objectEntry +'\n')
         return self
-
-    def add_object_node(self,object_name, branch_level, d_name, d_type, d_raw_text, p_score, understand_score, unknown_score,semantic_score):
-        new_object = ""
+    #this is the function that concatenates input analysis values into a long text string that defines each object and the initial detail it holds
+    def add_object_node(self,object_name, branch_level, d_name, d_type, d_raw_text, p_score, fam_score, unknown_score,semantic_score):
+        #structure of the new object with the initial detail
+        new_object = 'ObjectName:' + str(object_name) + \
+                     '\n\t<detail>BranchLevel:' + str(branch_level) + \
+                     ',DetailName:' + d_name +\
+                     ',DetailType:' + d_type +\
+                     ',DetailRawText:' + d_raw_text +\
+                     ',PersonalScore:' + str(p_score) +\
+                     ',FamiliarScore:' + str(fam_score) +\
+                     ',UnknownScore:' + str(unknown_score) +\
+                     ',SentimentScore:' + str(semantic_score) +\
+                     '</detail>'
+        #if the local storage is empty
         if os.path.getsize('localTree.txt') == 0:
-            print("1")
-            new_object = 'ObjectName:' + str(object_name) + '\n\t<detail>BranchLevel:'+str(branch_level)+',DetailName:'+d_name+',DetailType:'+d_type+',DetailRawText:'+d_raw_text+',PersonalScore:'+str(p_score)+',FamiliarScore:'+str(understand_score)+',UnknownScore:'+str(unknown_score)+',SentimentScore:'+str(semantic_score)+'</detail>'
+            new_object = new_object
+        # else update the existing storage object entries
         else:
-            print("2")
-            new_object = '\n\n'+'ObjectName:' + str(object_name) + '\n\t<detail>BranchLevel:'+str(branch_level)+',DetailName:'+d_name+',DetailType:'+d_type+',DetailRawText:'+d_raw_text+',PersonalScore:'+str(p_score)+',FamiliarScore:'+str(understand_score)+',UnknownScore:'+str(unknown_score)+',SentimentScore:'+str(semantic_score)+'</detail>'
+            new_object = '\n\n' + new_object
         with open("localTree.txt","r") as r:
             for i,line in enumerate(r):
                 if i == 0 and not line.strip():
-                    print("3")
-                    new_object = '\n\nObjectName:' + str(object_name) + '\n\t<detail>BranchLevel:'+str(branch_level)+',DetailName:'+d_name+',DetailType:'+d_type+',DetailRawText:'+d_raw_text+',PersonalScore:'+str(p_score)+',FamiliarScore:'+str(understand_score)+',UnknownScore:'+str(unknown_score)+',SentimentScore:'+str(semantic_score)+'</detail>'
+                    new_object = '\n\n' + new_object
         with open("localTree.txt","a") as t:
+            #write the new object to the local storage file
             t.write(new_object)
             t.close()
+            r.close()
+        return self
 
     def check_object_node(self,object_name):
         objfound = False
         with open("localTree.txt","r") as t:
-            target = "ObjectName:" + object_name
+            target = "ObjectName:" + str(object_name)
             print("Opened the local tree")
             lineNum = 0
             for line in t:

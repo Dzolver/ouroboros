@@ -1,25 +1,6 @@
-{"object_name":"USER","detail_name":dad,"detail_line_num":2,"raw_text:"I miss my dad very much}
-{"object_name":"USER","detail_name":pizza,"detail_line_num":3,"raw_text:"I ate pizza}
-{"object_name":"USER","detail_name":boy,"detail_line_num":4,"raw_text:"I would like to hit the boy}
-{"object_name":"USER","detail_name":apples,"detail_line_num":5,"raw_text:"I like hitting apples}
-{"object_name":"Anne","detail_name":time,"detail_line_num":15,"raw_text:"Anne thinks school is a waste of time}
-{"object_name":"Anne","detail_name":time,"detail_line_num":16,"raw_text:"Anne thinks school is a waste of time}
-{"object_name":"Anne","detail_name":time,"detail_line_num":17,"raw_text:"Anne thinks school is a waste of time}
-{"object_name":"Anne","detail_name":school,"detail_line_num":18,"raw_text:"Anne thinks that the school is bad}
-{"object_name":"School","detail_name":pain,"detail_line_num":25,"raw_text:"School is a pain}
-{"object_name":"USER","detail_name":pizza,"detail_line_num":6,"raw_text:"Should I buy this pizza ?}
-{"object_name":"money","detail_name":give,"detail_line_num":30,"raw_text:"Can you give some money ?}
-{"object_name":"USER","detail_name":submit,"detail_line_num":7,"raw_text:"why should I submit ?}
-{"object_name":"John","detail_name":pizza,"detail_line_num":53,"raw_text:"John thinks that pizza is expensive}
-{"object_name":"John","detail_name":alcohol,"detail_line_num":54,"raw_text:"John hates drinking alcohol}
-{"object_name":"Tharindu","detail_name":thesis,"detail_line_num":58,"raw_text:"Tharindu is almost done with his thesis}
-{"object_name":"Amruth","detail_name":food,"detail_line_num":62,"raw_text:"Amruth likes chinese food}
-{"object_name":"Amruth","detail_name":kids,"detail_line_num":63,"raw_text:"Amruth likes chinese kids}
-{"object_name":"USER","detail_name":wallet,"detail_line_num":8,"raw_text:"I stole from Stanleys wallet }
-{"object_name":"Brian","detail_name":school,"detail_line_num":68,"raw_text:"Brian met my teacher at school}
-{"object_name":"USER","detail_name":Brian,"detail_line_num":9,"raw_text:"I met Brian at school just now}
-{"object_name":"USER","detail_name":Brian,"detail_line_num":10,"raw_text:"I met Brian at school just now}
-{"object_name":"USER","detail_name":sofa,"detail_line_num":11,"raw_text:"When should I buy this sofa ?}
-{"object_name":"Manul","detail_name":store,"detail_line_num":28,"raw_text:"Manul stole from the grocery store}
-{"object_name":"USER","detail_name":money,"detail_line_num":12,"raw_text:"I stole some money yesterday}
-{"object_name":"USER","detail_name":money,"detail_line_num":13,"raw_text:"I borrowed some money yesterday}
+{"object_name":"rabbits","detail_name":are,"detail_line_num":8,"raw_text:"rabbits are adorable}
+{"object_name":"rabbits","detail_name":class,"detail_line_num":9,"raw_text:"The class is studying about rabbits}
+{"object_name":"USER","detail_name":Luke,"detail_line_num":5,"raw_text:"I hate going for Luke's classes}
+{"object_name":"USER","detail_name":go,"detail_line_num":6,"raw_text:"Where should I go ?}
+{"object_name":"rabbits","detail_name":are,"detail_line_num":12,"raw_text:"rabbits are hairy}
+{"object_name":"rabbits","detail_name":Neanderthals,"detail_line_num":13,"raw_text:"Neanderthals and rabbits}

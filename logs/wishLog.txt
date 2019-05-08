@@ -10,3 +10,13 @@
 {"object_name":"Manul","detail_name":store,"detail_line_num":28,"raw_text:"Manul stole from the grocery store}
 {"object_name":"USER","detail_name":money,"detail_line_num":12,"raw_text:"I stole some money yesterday}
 {"object_name":"USER","detail_name":money,"detail_line_num":13,"raw_text:"I borrowed some money yesterday}
+{"object_name":"S","detail_name":car,"detail_line_num":2,"raw_text:"I really the car is still working .}
+{"object_name":"S","detail_name":car,"detail_line_num":3,"raw_text:"I hope the car is still working .}
+{"object_name":"S","detail_name":father,"detail_line_num":4,"raw_text:"I actually miss my father .}
+{"object_name":"S","detail_name":pizza,"detail_line_num":5,"raw_text:"I think pizza is expensive .}
+{"object_name":"rabbits","detail_name":are,"detail_line_num":8,"raw_text:"rabbits are adorable}
+{"object_name":"rabbits","detail_name":class,"detail_line_num":9,"raw_text:"The class is studying about rabbits}
+{"object_name":"USER","detail_name":Luke,"detail_line_num":5,"raw_text:"I hate going for Luke's classes}
+{"object_name":"USER","detail_name":go,"detail_line_num":6,"raw_text:"Where should I go ?}
+{"object_name":"rabbits","detail_name":are,"detail_line_num":12,"raw_text:"rabbits are hairy}
+{"object_name":"rabbits","detail_name":Neanderthals,"detail_line_num":13,"raw_text:"Neanderthals and rabbits}
