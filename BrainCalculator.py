@@ -174,6 +174,14 @@ class BrainCalculator:
 
     def detailComponentRetriever(self,componentNumber,line):
         component = line.split(',')[componentNumber-1]
+        print("THIS IS A COMPONENT " + str(component))
+        return component
+
+    def rawTextFinder(self,componentNumber,line):
+        component = ""
+        for i, componentRaw in enumerate(line):
+            if i+1 == componentNumber:
+                component = (componentRaw.split(":"))[1]
         return component
 
     def check_object_node(self,object_name):
@@ -338,6 +346,7 @@ class BrainCalculator:
             else:
                 continue
         for word in noun_pool:
+            print('word:'+word)
             if self.find_object_node(word):
                 total_score = 2
                 detail_count,line_num,detail_array = self.check_object_details(self.get_object_line(word))
@@ -347,6 +356,8 @@ class BrainCalculator:
                 total_score = total_score * detail_count
                 noun_scores[word] = total_score
         print("Existing objects" + str(existing_objects))
+        local_memory = self.get_local_memory(noun_pool)
+        print('LOCAL MEMORY = ' + str(local_memory))
         if question:
             #get all segments from wrb,md, wp
             banana_split = sentence.split(" ")
@@ -359,15 +370,38 @@ class BrainCalculator:
                     target_question = word
                     break
             print("TARGET QUESTION : " + target_question)
-
+            local_memory = self.get_local_memory(noun_pool)
+            print('LOCAL MEMORY = ' + str(local_memory))
             return response
         elif not question:
             return response
 
     def get_local_memory(self,noun_pool):
         #for word in noun_pool:
-
-        return self
+        #access the storage and return
+        #all memories that have relevance to the input sentence in terms of
+            #1. Matching object names and all their details
+            #2. Matching detail names in other objects
+        with open('localTree.txt','r') as t:
+            print("NOUN POOL : " + str(noun_pool))
+            local_memory = []
+            all_lines = t.readlines()
+            for i,line in enumerate(all_lines):
+                lineNum = i + 1
+                #print("THIS IS PRINTED:" + str(self.detailComponentRetriever(4, line.strip())).split(':')[1])
+                print(line)
+                if "ObjectName:" in line:
+                    continue
+                elif line == "":
+                    continue
+                else:
+                    component = self.rawTextFinder(4,(line.strip()).split(","))
+                    print(str("THIS IS THE COMPONENT:" + component))
+                    for word in noun_pool:
+                        if word.lower() in component.lower():
+                            local_memory.append(component)
+                            break
+        return local_memory
 
     def get_server_memory(self):
         return self

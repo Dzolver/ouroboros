@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a021bf57-c95c-4b04-bd85-6628181d0552" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Byungcharn_Lee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Byungcharn_Lee.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BrainCalculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/BrainCalculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientChatbot" beforeDir="false" afterPath="$PROJECT_DIR$/clientChatbot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localTree.txt" beforeDir="false" afterPath="$PROJECT_DIR$/localTree.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/wishLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/wishLog.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/treeObjectCreator.py" beforeDir="false" afterPath="$PROJECT_DIR$/treeObjectCreator.py" afterDir="false" />
@@ -22,7 +20,7 @@
     <SUITE FILE_PATH="coverage/Testproject$training.coverage" NAME="training Coverage Results" MODIFIED="1553339907434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Testproject$chatbot_database.coverage" NAME="chatbot_database Coverage Results" MODIFIED="1551956013182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Testproject$layerManager.coverage" NAME="layerManager Coverage Results" MODIFIED="1552555196164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Testproject$clientChatbot.coverage" NAME="clientChatbot Coverage Results" MODIFIED="1557314823110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Testproject$clientChatbot.coverage" NAME="clientChatbot Coverage Results" MODIFIED="1557918745976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Testproject$create_training_data.coverage" NAME="create_training_data Coverage Results" MODIFIED="1552039538813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Testproject$clientChatbotWindow.coverage" NAME="clientChatbotWindow Coverage Results" MODIFIED="1556316552209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Testproject$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1552080098624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -55,61 +53,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/localTree.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="10" column="73" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/treeObjectCreator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="68" column="53" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wishLogCreator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="57" selection-start-column="57" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wishLog.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="112" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clientChatbot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2546">
-              <caret line="245" column="28" lean-forward="true" selection-start-line="245" selection-start-column="28" selection-end-line="245" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BrainCalculator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="347" column="47" lean-forward="true" selection-start-line="347" selection-start-column="47" selection-end-line="347" selection-end-column="47" />
+            <state relative-caret-position="634">
+              <caret line="400" column="39" selection-start-line="400" selection-start-column="39" selection-end-line="400" selection-end-column="39" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -118,15 +65,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/markovChainExample.py">
+        <entry file="file://$PROJECT_DIR$/clientChatbot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="54" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
+            <state relative-caret-position="645">
+              <caret line="381" selection-start-line="381" selection-end-line="381" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/localTree.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -167,6 +119,7 @@
       <find>return self</find>
       <find>os</find>
       <find>operator</find>
+      <find>component</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -208,17 +161,17 @@
         <option value="$PROJECT_DIR$/wishLogCreator.py" />
         <option value="$PROJECT_DIR$/lies.py" />
         <option value="$PROJECT_DIR$/wishLog.txt" />
-        <option value="$PROJECT_DIR$/localTree.txt" />
-        <option value="$PROJECT_DIR$/treeObjectCreator.py" />
         <option value="$PROJECT_DIR$/clientChatbot" />
+        <option value="$PROJECT_DIR$/treeObjectCreator.py" />
+        <option value="$PROJECT_DIR$/localTree.txt" />
         <option value="$PROJECT_DIR$/BrainCalculator.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1392" />
-    <option name="height" value="547" />
+    <option name="width" value="1910" />
+    <option name="height" value="1021" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -228,7 +181,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,6 +192,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -457,12 +410,16 @@
       <workItem from="1556868703308" duration="2358000" />
       <workItem from="1556983288812" duration="626000" />
       <workItem from="1557066379247" duration="2333000" />
-      <workItem from="1557308951429" duration="4309000" />
+      <workItem from="1557308951429" duration="4595000" />
+      <workItem from="1557581807606" duration="1337000" />
+      <workItem from="1557807600099" duration="1575000" />
+      <workItem from="1557903370411" duration="5450000" />
+      <workItem from="1557916630430" duration="2523000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274013000" />
+    <option name="totallyTimeSpent" value="285184000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -474,14 +431,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1392" height="547" extended-state="0" />
+    <frame x="-7" y="0" width="1910" height="1021" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.69693655" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.6967568" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294979" />
-      <window_info active="true" anchor="bottom" x="1377" y="31" width="542" height="508" id="Run" order="2" sideWeight="0.4978678" type="WINDOWED" visible="true" weight="0.2839378" />
+      <window_info active="true" anchor="bottom" x="196" y="174" width="1505" height="508" id="Run" order="2" sideWeight="0.4978678" type="WINDOWED" visible="true" weight="0.2839378" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -490,7 +447,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021322" side_tool="true" weight="0.6845039" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" weight="0.32953367" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" weight="0.15393259" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.4989339" weight="0.32953367" />
       <window_info anchor="right" x="0" y="0" width="434" height="896" id="Documentation" order="0" side_tool="true" weight="0.32995737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
@@ -500,12 +457,12 @@
       <window_info anchor="right" id="Database" order="5" weight="0.32995737" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1391258" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.69693655" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294979" />
-      <window_info active="true" anchor="bottom" x="1330" y="31" width="589" height="1048" id="Run" order="2" sideWeight="0.4978678" type="WINDOWED" visible="true" weight="0.2839378" />
+      <window_info anchor="bottom" x="1377" y="31" width="542" height="508" id="Run" order="2" sideWeight="0.4978678" type="WINDOWED" weight="0.2839378" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -514,7 +471,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021322" side_tool="true" weight="0.6845039" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" weight="0.32953367" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" visible="true" weight="0.15393259" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.4989339" weight="0.32953367" />
       <window_info anchor="right" x="0" y="0" width="434" height="896" id="Documentation" order="0" side_tool="true" weight="0.32995737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
@@ -541,13 +498,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exampleData.csv">
+      <provider editor-type-id="text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
           <column index="0" width="100" />
           <column index="1" width="100" />
         </state>
       </provider>
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="23">
           <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
@@ -744,10 +701,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lies.py">
+    <entry file="file://$PROJECT_DIR$/lies.py" />
+    <entry file="file://$PROJECT_DIR$/markovChainExample.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2852">
-          <caret line="124" column="24" selection-start-line="124" selection-start-column="24" selection-end-line="124" selection-end-column="24" />
+        <state relative-caret-position="210">
+          <caret line="5" column="54" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -760,45 +721,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wishLog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
+        <state relative-caret-position="42">
           <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/markovChainExample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="54" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/treeObjectCreator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="68" column="53" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
+        <state relative-caret-position="-1597">
+          <caret line="82" column="24" lean-forward="true" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BrainCalculator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="347" column="47" lean-forward="true" selection-start-line="347" selection-start-column="47" selection-end-line="347" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clientChatbot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2546">
-          <caret line="245" column="28" lean-forward="true" selection-start-line="245" selection-start-column="28" selection-end-line="245" selection-end-column="28" />
+        <state relative-caret-position="645">
+          <caret line="381" selection-start-line="381" selection-end-line="381" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -806,9 +747,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/localTree.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BrainCalculator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="10" column="73" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
+        <state relative-caret-position="634">
+          <caret line="400" column="39" selection-start-line="400" selection-start-column="39" selection-end-line="400" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

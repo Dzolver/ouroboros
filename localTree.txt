@@ -1,32 +1,22 @@
-ObjectName:Obama
-	<detail>BranchLevel:1,DetailName:leader,DetailType:GENERIC,DetailRawText:Obama is a great leader,PersonalScore:0.0,FamiliarScore:-5.0,UnknownScore:10.0,SentimentScore:0.6249</detail>
-
 ObjectName:USER
-	<detail>BranchLevel:1,DetailName:piano,DetailType:PERSONAL,DetailRawText:I want to play the piano .,PersonalScore:1.45,FamiliarScore:-0.5,UnknownScore:10.0,SentimentScore:0.4019</detail>
-	<detail>BranchLevel:1,DetailName:Luke,DetailType:PERSONAL,DetailRawText:I hate going for Luke's classes,PersonalScore:1.45,FamiliarScore:10.75,UnknownScore:10.0,SentimentScore:-0.5719</detail>
-	<detail>BranchLevel:1,DetailName:go,DetailType:PERSONAL,DetailRawText:Where should I go ?,PersonalScore:1.25,FamiliarScore:22.0,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:apples,DetailType:PERSONAL,DetailRawText:I hate apples,PersonalScore:0.85,FamiliarScore:-5.0,UnknownScore:10.0,SentimentScore:-0.5719</detail>
+	<detail>BranchLevel:1,DetailName:tea,DetailType:PERSONAL,DetailRawText:I love tea,PersonalScore:0.85,FamiliarScore:6.25,UnknownScore:10.0,SentimentScore:0.6369</detail>
 
-ObjectName:rabbits
-	<detail>BranchLevel:1,DetailName:class,DetailType:GENERIC,DetailRawText:The class is studying about rabbits,PersonalScore:0.0,FamiliarScore:-2.75,UnknownScore:10.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:are,DetailType:GENERIC,DetailRawText:rabbits are adorable,PersonalScore:-0.4,FamiliarScore:-2.25,UnknownScore:10.0,SentimentScore:0.4939</detail>
-	<detail>BranchLevel:1,DetailName:class,DetailType:GENERIC,DetailRawText:The class is studying about rabbits,PersonalScore:0.0,FamiliarScore:13.5,UnknownScore:8.5,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:are,DetailType:GENERIC,DetailRawText:rabbits are hairy,PersonalScore:-0.4,FamiliarScore:9.0,UnknownScore:8.5,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:Neanderthals,DetailType:GENERIC,DetailRawText:Neanderthals and rabbits,PersonalScore:0.0,FamiliarScore:12.25,UnknownScore:8.0,SentimentScore:0.0</detail>
+ObjectName:apples
+	<detail>BranchLevel:1,DetailName:eat,DetailType:GENERIC,DetailRawText:apples are bad to eat,PersonalScore:-0.6000000000000001,FamiliarScore:-2.75,UnknownScore:10.0,SentimentScore:-0.5423</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:0.0,UnknownScore:10.0,SentimentScore:0.0</detail>
 
-ObjectName:museum
-	<detail>BranchLevel:1,DetailName:Neanderthal,DetailType:SECRET,DetailRawText:We saw a Neanderthal in the museum,PersonalScore:2.25,FamiliarScore:14.5,UnknownScore:10.0,SentimentScore:0.0</detail>
+ObjectName:Brian
+	<detail>BranchLevel:1,DetailName:today,DetailType:GENERIC,DetailRawText:Brian went to college today,PersonalScore:0.0,FamiliarScore:-2.75,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:tea,DetailType:GENERIC,DetailRawText:Brian loves tea,PersonalScore:0.0,FamiliarScore:4.5,UnknownScore:10.0,SentimentScore:0.5719</detail>
 
-ObjectName:Neanderthals
-	<detail>BranchLevel:1,DetailName:are,DetailType:GENERIC,DetailRawText:Neanderthals are hairy,PersonalScore:-0.4,FamiliarScore:-2.75,UnknownScore:10.0,SentimentScore:0.0</detail>
+ObjectName:college
+	<detail>BranchLevel:1,DetailName:boring,DetailType:GENERIC,DetailRawText:college is so boring,PersonalScore:0.0,FamiliarScore:4.0,UnknownScore:10.0,SentimentScore:-0.4572</detail>
 
-ObjectName:life
-	<detail>BranchLevel:1,DetailName:meaning,DetailType:GENERIC,DetailRawText:What is the meaning of life ?,PersonalScore:0.0,FamiliarScore:6.25,UnknownScore:10.0,SentimentScore:0.0</detail>
+ObjectName:Apples
+	<detail>BranchLevel:1,DetailName:are,DetailType:GENERIC,DetailRawText:Apples are expensive,PersonalScore:-0.4,FamiliarScore:-2.75,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:are,DetailType:GENERIC,DetailRawText:Apples are great,PersonalScore:-0.4,FamiliarScore:2.25,UnknownScore:8.5,SentimentScore:0.6249</detail>
 
-ObjectName:Luke
-	<detail>BranchLevel:1,DetailName:such,DetailType:GENERIC,DetailRawText:Luke is such,PersonalScore:0.0,FamiliarScore:6.25,UnknownScore:10.0,SentimentScore:0.0</detail>
-
-ObjectName:Moiz
-	<detail>BranchLevel:1,DetailName:game,DetailType:GENERIC,DetailRawText:Moiz is playing a game,PersonalScore:0.0,FamiliarScore:32.25,UnknownScore:10.0,SentimentScore:0.2023</detail>
-
-ObjectName:whales
-	<detail>BranchLevel:1,DetailName:are,DetailType:GENERIC,DetailRawText:whales are hairy,PersonalScore:-0.4,FamiliarScore:6.25,UnknownScore:10.0,SentimentScore:0.0</detail>
+ObjectName:Tea
+	<detail>BranchLevel:1,DetailName:apples,DetailType:GENERIC,DetailRawText:Tea is cheaper than apples,PersonalScore:0.0,FamiliarScore:4.5,UnknownScore:6.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:Brian,DetailType:GENERIC,DetailRawText:Brian loves Tea,PersonalScore:0.0,FamiliarScore:0.5,UnknownScore:8.0,SentimentScore:0.5719</detail>

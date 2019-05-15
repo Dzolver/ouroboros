@@ -168,6 +168,7 @@ class TreeObjectCreator:
         all_objects_raw_text = t.read().split('\n\n')
         count = 0
         for objectEntry in all_objects_raw_text:
-            count+=1
+            count += 1
             print("OBJECT ENTRY " + str(count) + " : \n" + objectEntry +'\n')
         return self
+

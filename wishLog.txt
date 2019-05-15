@@ -4,3 +4,34 @@
 {"object_name":"USER","detail_name":go,"detail_line_num":6,"raw_text:"Where should I go ?}
 {"object_name":"rabbits","detail_name":are,"detail_line_num":12,"raw_text:"rabbits are hairy}
 {"object_name":"rabbits","detail_name":Neanderthals,"detail_line_num":13,"raw_text:"Neanderthals and rabbits}
+{"object_name":"Athyab","detail_name":Michael,"detail_line_num":35,"raw_text:"Athyab and Michael went to play}
+{"object_name":"USER","detail_name":apples,"detail_line_num":7,"raw_text:"I hate eating apples}
+{"object_name":"USER","detail_name":Athyab,"detail_line_num":8,"raw_text:"I stole from Athyab at school}
+{"object_name":"Brian","detail_name":today,"detail_line_num":44,"raw_text:"Brian went to college today}
+{"object_name":"apple","detail_name":heard,"detail_line_num":48,"raw_text:"Have you heard of an apple}
+{"object_name":"apple","detail_name":heard,"detail_line_num":49,"raw_text:"Have you heard of an apple}
+{"object_name":"apple","detail_name":heard,"detail_line_num":50,"raw_text:"Have you heard of an apple}
+{"object_name":"apple","detail_name":heard,"detail_line_num":51,"raw_text:"Have you heard of an apple}
+{"object_name":"apple","detail_name":heard,"detail_line_num":52,"raw_text:"Have you heard of an apple}
+{"object_name":"apple","detail_name":heard,"detail_line_num":53,"raw_text:"Have you heard of an apple}
+{"object_name":"apples","detail_name":heard,"detail_line_num":5,"raw_text:"Have you heard of apples?}
+{"object_name":"apples","detail_name":heard,"detail_line_num":6,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":7,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":8,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":9,"raw_text:"Have you heard of apples?}
+{"object_name":"apples","detail_name":heard,"detail_line_num":10,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":11,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":12,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":13,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":14,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":15,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":16,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":17,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":18,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":have,"detail_line_num":19,"raw_text:"have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":20,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":5,"raw_text:"Have you heard of apples}
+{"object_name":"USER","detail_name":tea,"detail_line_num":2,"raw_text:"I love tea}
+{"object_name":"Apples","detail_name":are,"detail_line_num":16,"raw_text:"Apples are great}
+{"object_name":"Tea","detail_name":Brian,"detail_line_num":20,"raw_text:"Brian loves Tea}
+{"object_name":"Brian","detail_name":tea,"detail_line_num":10,"raw_text:"Brian loves tea}
