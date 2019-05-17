@@ -68,3 +68,14 @@
 {"object_name":"pizza","detail_name":apples,"detail_line_num":61,"raw_text:"apples and pizza}
 {"object_name":"pizza","detail_name":heard,"detail_line_num":62,"raw_text:"Have you heard of pizza}
 {"object_name":"apples","detail_name":heard,"detail_line_num":18,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":are,"detail_line_num":2,"raw_text:"What are apples}
+{"object_name":"apples","detail_name":are,"detail_line_num":3,"raw_text:"What are apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":4,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":5,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":6,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":7,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":8,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":9,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":10,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":11,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":12,"raw_text:"Have you heard of apples}

@@ -362,7 +362,11 @@ class BrainCalculator:
                 noun_scores[word] = total_score
         print("Existing objects" + str(existing_objects))
         local_memory = self.get_local_memory(noun_pool)
+        server_memory = self.get_server_memory()
+        total_memory = self.get_total_memory(local_memory,server_memory)
         print('LOCAL MEMORY = ' + str(local_memory))
+        print('SERVER MEMORY = ' + str(server_memory))
+        print('TOTAL MEMORY = ' + str(total_memory))
         if question:
             #get all segments from wrb,md, wp
             banana_split = sentence.split(" ")
@@ -409,13 +413,32 @@ class BrainCalculator:
         payload = {'noun_pool':self.global_noun_pool}
         URL = "http://127.0.0.1:5000/remember"
         r = requests.get(url=URL,params=payload)
-        print(r.text)
+        server_memory = r.text
+        split1 = server_memory.split(',')
+        split2 = []
+        for split in split1:
+                split2.append(split.split("'")[1])
+        print("SPLIT2:" + str(split2))
+        final_server_memory = split2
         #os.system('python -m webbrowser -t "http://127.0.0.1:5000/remember/"')
         #os.system('python flaskBoi.py')
-        return self
+        return final_server_memory
 
-    def get_total_memory(self):
-        return self
+    def get_total_memory(self,local_memory,server_memory):
+        total_memory = []
+        for i,memory in enumerate(local_memory):
+            for j, smemory in enumerate(server_memory):
+                if memory == smemory:
+                    total_memory.append(memory)
+                    local_memory.pop(i)
+                    server_memory.pop(j)
+                    break
+                else:
+                    continue
+        total_memory = total_memory + local_memory
+        total_memory = total_memory + server_memory
+        total_memory = list(dict.fromkeys(total_memory))
+        return total_memory
 
     def has_enough_knowledge(self):
         return self

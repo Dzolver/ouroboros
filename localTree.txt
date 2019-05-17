@@ -1,70 +1,16 @@
-ObjectName:USER
-	<detail>BranchLevel:1,DetailName:apples,DetailType:PERSONAL,DetailRawText:I hate apples,PersonalScore:0.85,FamiliarScore:-5.0,UnknownScore:10.0,SentimentScore:-0.5719</detail>
-	<detail>BranchLevel:1,DetailName:tea,DetailType:PERSONAL,DetailRawText:I love tea,PersonalScore:0.85,FamiliarScore:6.25,UnknownScore:10.0,SentimentScore:0.6369</detail>
-
 ObjectName:apples
-	<detail>BranchLevel:1,DetailName:eat,DetailType:GENERIC,DetailRawText:apples are bad to eat,PersonalScore:-0.6000000000000001,FamiliarScore:-2.75,UnknownScore:10.0,SentimentScore:-0.5423</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:0.0,UnknownScore:10.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:103.5,UnknownScore:8.5,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:114.75,UnknownScore:7.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:126.0,UnknownScore:5.5,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:137.25,UnknownScore:4.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:175.5,UnknownScore:2.5,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:231.75,UnknownScore:1.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:243.0,UnknownScore:-0.5,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:254.25,UnknownScore:-2.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:265.5,UnknownScore:-3.5,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:276.75,UnknownScore:-5.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:297.0,UnknownScore:-6.5,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:357.75,UnknownScore:-8.0,SentimentScore:0.0</detail>
-
-ObjectName:Brian
-	<detail>BranchLevel:1,DetailName:today,DetailType:GENERIC,DetailRawText:Brian went to college today,PersonalScore:0.0,FamiliarScore:-2.75,UnknownScore:10.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:tea,DetailType:GENERIC,DetailRawText:Brian loves tea,PersonalScore:0.0,FamiliarScore:4.5,UnknownScore:10.0,SentimentScore:0.5719</detail>
-
-ObjectName:college
-	<detail>BranchLevel:1,DetailName:boring,DetailType:GENERIC,DetailRawText:college is so boring,PersonalScore:0.0,FamiliarScore:4.0,UnknownScore:10.0,SentimentScore:-0.4572</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of college,PersonalScore:0.8000000000000002,FamiliarScore:171.0,UnknownScore:10.0,SentimentScore:0.0</detail>
-
-ObjectName:Apples
-	<detail>BranchLevel:1,DetailName:are,DetailType:GENERIC,DetailRawText:Apples are expensive,PersonalScore:-0.4,FamiliarScore:-2.75,UnknownScore:10.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:are,DetailType:GENERIC,DetailRawText:Apples are great,PersonalScore:-0.4,FamiliarScore:2.25,UnknownScore:8.5,SentimentScore:0.6249</detail>
-
-ObjectName:Tea
-	<detail>BranchLevel:1,DetailName:apples,DetailType:GENERIC,DetailRawText:Tea is cheaper than apples,PersonalScore:0.0,FamiliarScore:4.5,UnknownScore:6.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:Brian,DetailType:GENERIC,DetailRawText:Brian loves Tea,PersonalScore:0.0,FamiliarScore:0.5,UnknownScore:8.0,SentimentScore:0.5719</detail>
-
-ObjectName:tea
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea ?,PersonalScore:0.9500000000000002,FamiliarScore:8.5,UnknownScore:10.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea ?,PersonalScore:0.9500000000000002,FamiliarScore:22.5,UnknownScore:8.5,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea ?,PersonalScore:0.9500000000000002,FamiliarScore:36.0,UnknownScore:7.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea ?,PersonalScore:0.9500000000000002,FamiliarScore:49.5,UnknownScore:5.5,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea ?,PersonalScore:0.9500000000000002,FamiliarScore:63.0,UnknownScore:4.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea ?,PersonalScore:0.9500000000000002,FamiliarScore:76.5,UnknownScore:2.5,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea ?,PersonalScore:0.9500000000000002,FamiliarScore:90.0,UnknownScore:1.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea ?,PersonalScore:0.9500000000000002,FamiliarScore:103.5,UnknownScore:-0.5,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea ?,PersonalScore:0.9500000000000002,FamiliarScore:117.0,UnknownScore:-2.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea ?,PersonalScore:0.9500000000000002,FamiliarScore:130.5,UnknownScore:-3.5,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:157.5,UnknownScore:-5.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:168.75,UnknownScore:-6.5,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:216.0,UnknownScore:-8.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:227.25,UnknownScore:-9.5,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:238.5,UnknownScore:-11.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:312.75,UnknownScore:-12.5,SentimentScore:0.0</detail>
-
-ObjectName:banana
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of banana,PersonalScore:0.8000000000000002,FamiliarScore:148.0,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:are,DetailType:GENERIC,DetailRawText:What are apples,PersonalScore:-0.4,FamiliarScore:-5.0,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:are,DetailType:GENERIC,DetailRawText:What are apples,PersonalScore:-0.4,FamiliarScore:2.25,UnknownScore:8.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:are,DetailType:GENERIC,DetailRawText:What are apples,PersonalScore:-0.4,FamiliarScore:11.25,UnknownScore:7.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:2.25,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:13.5,UnknownScore:8.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:24.75,UnknownScore:7.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:36.0,UnknownScore:5.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:47.25,UnknownScore:4.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:58.5,UnknownScore:2.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:69.75,UnknownScore:1.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:81.0,UnknownScore:-0.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:92.25,UnknownScore:-2.0,SentimentScore:0.0</detail>
 
 ObjectName:pizza
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of pizza,PersonalScore:0.8000000000000002,FamiliarScore:175.0,UnknownScore:10.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of pizza,PersonalScore:0.8000000000000002,FamiliarScore:294.75,UnknownScore:8.5,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of pizza,PersonalScore:0.8000000000000002,FamiliarScore:306.0,UnknownScore:7.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:apples,DetailType:GENERIC,DetailRawText:apples and pizza,PersonalScore:0.0,FamiliarScore:36.5,UnknownScore:-16.0,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:apples,DetailType:GENERIC,DetailRawText:apples and pizza,PersonalScore:0.0,FamiliarScore:43.25,UnknownScore:-17.5,SentimentScore:0.0</detail>
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of pizza,PersonalScore:0.8000000000000002,FamiliarScore:321.75,UnknownScore:5.5,SentimentScore:0.0</detail>
-
-ObjectName:expensive
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of expensive,PersonalScore:0.8000000000000002,FamiliarScore:258.25,UnknownScore:10.0,SentimentScore:0.0</detail>
-
-ObjectName:father
-	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of father,PersonalScore:0.8000000000000002,FamiliarScore:283.0,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is pizza,PersonalScore:0.0,FamiliarScore:-0.5,UnknownScore:10.0,SentimentScore:0.0</detail>
