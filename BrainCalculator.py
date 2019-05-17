@@ -2,7 +2,10 @@ import os
 from nltk import word_tokenize
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from sklearn.feature_extraction.text import CountVectorizer
-
+import requests
+import json
+import flaskBoi
+import webbrowser
 
 java_path = "C:/Program Files/Java/jdk-12/bin/java.exe"
 os.environ['JAVAHOME'] = java_path
@@ -24,6 +27,7 @@ class BrainCalculator:
     unknown_score = 0
     sentence = ""
     semantic_score = 0
+    global_noun_pool = []
 
     def __init__(self,object_name,detail_name,branch_level,personality_score,understanding_score,unknown_score,sentence,semantic_score):
         self.object_name = object_name
@@ -334,6 +338,7 @@ class BrainCalculator:
         line_num = 0
         detail_array = []
         noun_scores = dict()
+        self.global_noun_pool = noun_pool
         for word in pronoun_pool:
             if self.find_object_node(word):
                 total_score = 2
@@ -383,20 +388,16 @@ class BrainCalculator:
             #1. Matching object names and all their details
             #2. Matching detail names in other objects
         with open('localTree.txt','r') as t:
-            print("NOUN POOL : " + str(noun_pool))
             local_memory = []
             all_lines = t.readlines()
             for i,line in enumerate(all_lines):
-                lineNum = i + 1
                 #print("THIS IS PRINTED:" + str(self.detailComponentRetriever(4, line.strip())).split(':')[1])
-                print(line)
                 if "ObjectName:" in line:
                     continue
                 elif line == "":
                     continue
                 else:
                     component = self.rawTextFinder(4,(line.strip()).split(","))
-                    print(str("THIS IS THE COMPONENT:" + component))
                     for word in noun_pool:
                         if word.lower() in component.lower():
                             local_memory.append(component)
@@ -404,12 +405,19 @@ class BrainCalculator:
         return local_memory
 
     def get_server_memory(self):
-        return self
-
-    def has_enough_knowledge(self):
+        print("RUNNING SERVER MEMORY FUNCTION!")
+        payload = {'noun_pool':self.global_noun_pool}
+        URL = "http://127.0.0.1:5000/remember"
+        r = requests.get(url=URL,params=payload)
+        print(r.text)
+        #os.system('python -m webbrowser -t "http://127.0.0.1:5000/remember/"')
+        #os.system('python flaskBoi.py')
         return self
 
     def get_total_memory(self):
+        return self
+
+    def has_enough_knowledge(self):
         return self
 
     def create_word_bank(self):
