@@ -381,6 +381,7 @@ if __name__ == '__main__':
 
                 generated_response = brainiac.generate_response(sentence,object_name,detail_name,check_question(sentence),personal_score,fam_score,unknown_score,sentiment_score,detail_array)
         print(COUTPUT + "Ouroboros: " + str(response) + CEND)
+        brainiac.get_server_memory()
         #process = subprocess.Popen("sudo gnome-terminal -- python ouroServer.py",stdout = subprocess.PIPE,stderr=None,shell=True)
         #clear to get ready for new input
         localCandidate.clear()

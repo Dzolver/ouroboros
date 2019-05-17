@@ -51,3 +51,36 @@
 {"object_name":"Apples","detail_name":are,"detail_line_num":16,"raw_text:"Apples are great}
 {"object_name":"Tea","detail_name":Brian,"detail_line_num":20,"raw_text:"Brian loves Tea}
 {"object_name":"Brian","detail_name":tea,"detail_line_num":10,"raw_text:"Brian loves tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":25,"raw_text:"Have you heard of tea ?}
+{"object_name":"tea","detail_name":heard,"detail_line_num":26,"raw_text:"Have you heard of tea ?}
+{"object_name":"tea","detail_name":heard,"detail_line_num":27,"raw_text:"Have you heard of tea ?}
+{"object_name":"tea","detail_name":heard,"detail_line_num":28,"raw_text:"Have you heard of tea ?}
+{"object_name":"tea","detail_name":heard,"detail_line_num":29,"raw_text:"Have you heard of tea ?}
+{"object_name":"tea","detail_name":heard,"detail_line_num":30,"raw_text:"Have you heard of tea ?}
+{"object_name":"tea","detail_name":heard,"detail_line_num":31,"raw_text:"Have you heard of tea ?}
+{"object_name":"tea","detail_name":heard,"detail_line_num":32,"raw_text:"Have you heard of tea ?}
+{"object_name":"tea","detail_name":heard,"detail_line_num":33,"raw_text:"Have you heard of tea ?}
+{"object_name":"apples","detail_name":heard,"detail_line_num":7,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":8,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":9,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":10,"raw_text:"Have you heard of apples}
+{"object_name":"tea","detail_name":heard,"detail_line_num":38,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":39,"raw_text:"Have you heard of tea}
+{"object_name":"apples","detail_name":heard,"detail_line_num":11,"raw_text:"Have you heard of apples}
+{"object_name":"college","detail_name":heard,"detail_line_num":19,"raw_text:"Have you heard of college}
+{"object_name":"tea","detail_name":heard,"detail_line_num":42,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":43,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":44,"raw_text:"Have you heard of tea}
+{"object_name":"apples","detail_name":heard,"detail_line_num":12,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":13,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":14,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":15,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":16,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":17,"raw_text:"Have you heard of apples}
+{"object_name":"tea","detail_name":heard,"detail_line_num":51,"raw_text:"Have you heard of tea}
+{"object_name":"pizza","detail_name":heard,"detail_line_num":58,"raw_text:"Have you heard of pizza}
+{"object_name":"pizza","detail_name":heard,"detail_line_num":59,"raw_text:"Have you heard of pizza}
+{"object_name":"pizza","detail_name":apples,"detail_line_num":60,"raw_text:"apples and pizza}
+{"object_name":"pizza","detail_name":apples,"detail_line_num":61,"raw_text:"apples and pizza}
+{"object_name":"pizza","detail_name":heard,"detail_line_num":62,"raw_text:"Have you heard of pizza}
+{"object_name":"apples","detail_name":heard,"detail_line_num":18,"raw_text:"Have you heard of apples}
