@@ -28,7 +28,7 @@ class BrainCalculator:
     sentence = ""
     semantic_score = 0
     global_noun_pool = []
-
+    question = False
     def __init__(self,object_name,detail_name,branch_level,personality_score,understanding_score,unknown_score,sentence,semantic_score):
         self.object_name = object_name
         self.detail_name = detail_name
@@ -254,6 +254,7 @@ class BrainCalculator:
         detail_score = 0
         statement_score = 0
         question_score = 0
+        self.question = question
         pronoun_pool = []
         noun_pool = []
         adjectives_pool = []
@@ -367,6 +368,8 @@ class BrainCalculator:
         print('LOCAL MEMORY = ' + str(local_memory))
         print('SERVER MEMORY = ' + str(server_memory))
         print('TOTAL MEMORY = ' + str(total_memory))
+        generated_word_bank = self.create_word_bank(total_memory)
+        print('WORD BANK : ' + str(generated_word_bank))
         if question:
             #get all segments from wrb,md, wp
             banana_split = sentence.split(" ")
@@ -443,8 +446,128 @@ class BrainCalculator:
     def has_enough_knowledge(self):
         return self
 
-    def create_word_bank(self):
-        return self
+    def create_word_bank(self,total_memory):
+        word_bank = []
+        pronoun_pool = []
+        noun_pool = []
+        adjectives_pool = []
+        verb_pool=[]
+        past_verb_pool=[]
+        simple_verb_pool=[]
+        VRB_pool= []
+        rb_pool= []
+        MD_pool = []
+        WRB_pool = []
+        WP_pool = []
+        for memory in total_memory:
+            for entry in self.justTAG(memory):
+                pos = entry[0]
+                tag = entry[1]
+                if tag == 'NN':  # NOUNS
+                    if pos in noun_pool:
+                        continue
+                    else:
+                        noun_pool.append(pos)
+                        continue
+                elif tag == 'NNS':  # NOUNS PLURAL
+                    if pos in noun_pool:
+                        continue
+                    else:
+                        noun_pool.append(pos)
+                        continue
+                elif tag == 'NNP':  # unidentified pronoun
+                    if pos in pronoun_pool:
+                        continue
+                    else:
+                        pronoun_pool.append(pos)
+                        continue
+                elif tag == 'JJ':  # ADJECTIVES
+                    if pos in adjectives_pool:
+                        continue
+                    else:
+                        adjectives_pool.append(pos)
+                        continue
+                elif tag == 'VBP':  # VERB
+                    if pos in verb_pool:
+                        continue
+                    else:
+                        verb_pool.append(pos)
+                        continue
+                elif tag == 'VRB':
+                    if pos == "do" and self.question:
+                        if pos in WP_pool:
+                            continue
+                        else:
+                            WP_pool.append(pos)
+                            continue
+                    else:
+                        if pos in VRB_pool:
+                            continue
+                        else:
+                            VRB_pool.append(pos)
+                            continue
+                elif tag == 'VB':
+                    if pos in simple_verb_pool:
+                        continue
+                    else:
+                        simple_verb_pool.append(pos)
+                        continue
+                elif tag == 'VBD':
+                    if pos in past_verb_pool:
+                        continue
+                    else:
+                        past_verb_pool.append(pos)
+                        continue
+                elif tag == 'VBG':
+                    if pos in verb_pool:
+                        continue
+                    else:
+                        verb_pool.append(pos)
+                        continue
+                elif tag == 'VBZ':
+                    if pos in verb_pool:
+                        continue
+                    else:
+                        verb_pool.append(pos)
+                        continue
+                elif tag == 'RB':  # Example : do you STILL like me ?
+                    if pos in rb_pool:
+                        continue
+                    else:
+                        rb_pool.append(pos)
+                        continue
+                elif tag == 'MD':
+                    if pos in MD_pool:
+                        continue
+                    else:
+                        MD_pool.append(pos)
+                        continue
+                elif tag == 'WRB':
+                    if pos in WRB_pool:
+                        continue
+                    else:
+                        WRB_pool.append(pos)
+                        continue
+                elif tag == 'WP':
+                    if pos in WP_pool:
+                        continue
+                    else:
+                        WP_pool.append(pos)
+                        continue
+                else:
+                    continue
+        word_bank.append(pronoun_pool)
+        word_bank.append(noun_pool)
+        word_bank.append(verb_pool)
+        word_bank.append(WP_pool)
+        word_bank.append(VRB_pool)
+        word_bank.append(simple_verb_pool)
+        word_bank.append(past_verb_pool)
+        word_bank.append(verb_pool)
+        word_bank.append(rb_pool)
+        word_bank.append(MD_pool)
+        word_bank.append(WRB_pool)
+        return word_bank
 
     def connect_components(self):
         return self
