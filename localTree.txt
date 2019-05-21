@@ -11,6 +11,109 @@ ObjectName:apples
 	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:69.75,UnknownScore:1.0,SentimentScore:0.0</detail>
 	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:81.0,UnknownScore:-0.5,SentimentScore:0.0</detail>
 	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:92.25,UnknownScore:-2.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:103.5,UnknownScore:-3.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:114.75,UnknownScore:-5.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:126.0,UnknownScore:-6.5,SentimentScore:0.0</detail>
 
 ObjectName:pizza
 	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is pizza,PersonalScore:0.0,FamiliarScore:-0.5,UnknownScore:10.0,SentimentScore:0.0</detail>
+
+ObjectName:Buwaneka
+	<detail>BranchLevel:1,DetailName:student,DetailType:GENERIC,DetailRawText:Buwaneka is a student now,PersonalScore:0.0,FamiliarScore:56.75,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:coding,DetailType:GENERIC,DetailRawText:Buwaneka loves coding,PersonalScore:0.0,FamiliarScore:-2.25,UnknownScore:10.0,SentimentScore:0.5719</detail>
+
+ObjectName:tea
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:103.0,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:114.75,UnknownScore:8.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:126.0,UnknownScore:7.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:137.25,UnknownScore:5.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:148.5,UnknownScore:4.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:159.75,UnknownScore:2.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:171.0,UnknownScore:1.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:182.25,UnknownScore:-0.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:193.5,UnknownScore:-2.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:204.75,UnknownScore:-3.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:216.0,UnknownScore:-5.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:227.25,UnknownScore:-6.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:238.5,UnknownScore:-8.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:249.75,UnknownScore:-9.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:261.0,UnknownScore:-11.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:274.5,UnknownScore:-12.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:288.0,UnknownScore:-14.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:303.75,UnknownScore:-15.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:315.0,UnknownScore:-17.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:326.25,UnknownScore:-18.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:337.5,UnknownScore:-20.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:348.75,UnknownScore:-21.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:360.0,UnknownScore:-23.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:371.25,UnknownScore:-24.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:387.0,UnknownScore:-26.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:398.25,UnknownScore:-27.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:409.5,UnknownScore:-29.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:420.75,UnknownScore:-30.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:432.0,UnknownScore:-32.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:443.25,UnknownScore:-33.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:454.5,UnknownScore:-35.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:465.75,UnknownScore:-36.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:477.0,UnknownScore:-38.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:488.25,UnknownScore:-39.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:499.5,UnknownScore:-41.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:510.75,UnknownScore:-42.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:522.0,UnknownScore:-44.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:533.25,UnknownScore:-45.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:544.5,UnknownScore:-47.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:555.75,UnknownScore:-48.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:567.0,UnknownScore:-50.0,SentimentScore:0.0</detail>
+
+ObjectName:USER
+	<detail>BranchLevel:1,DetailName:tea,DetailType:PERSONAL,DetailRawText:I love tea,PersonalScore:0.85,FamiliarScore:45.0,UnknownScore:-20.0,SentimentScore:0.6369</detail>
+	<detail>BranchLevel:1,DetailName:tea,DetailType:PERSONAL,DetailRawText:I love tea,PersonalScore:0.85,FamiliarScore:54.0,UnknownScore:-23.5,SentimentScore:0.6369</detail>
+	<detail>BranchLevel:1,DetailName:tea,DetailType:PERSONAL,DetailRawText:I love tea,PersonalScore:0.85,FamiliarScore:63.0,UnknownScore:-27.0,SentimentScore:0.6369</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:SECRET,DetailRawText:I went to the college today,PersonalScore:2.0,FamiliarScore:28.75,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:SECRET,DetailRawText:I got to the cafe on time today,PersonalScore:2.5,FamiliarScore:276.25,UnknownScore:8.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:apples,DetailType:PERSONAL,DetailRawText:I think apples are expensive,PersonalScore:0.7500000000000001,FamiliarScore:81.0,UnknownScore:-20.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:tea,DetailType:PERSONAL,DetailRawText:I like tea,PersonalScore:0.85,FamiliarScore:117.0,UnknownScore:-42.5,SentimentScore:0.3612</detail>
+	<detail>BranchLevel:1,DetailName:plan,DetailType:PERSONAL,DetailRawText:I have a plan,PersonalScore:1.0000000000000002,FamiliarScore:259.25,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:plan,DetailType:PERSONAL,DetailRawText:I have a plan,PersonalScore:1.0000000000000002,FamiliarScore:268.25,UnknownScore:8.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:plan,DetailType:PERSONAL,DetailRawText:I have a plan,PersonalScore:1.0000000000000002,FamiliarScore:277.25,UnknownScore:7.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:plan,DetailType:PERSONAL,DetailRawText:I have a plan,PersonalScore:1.0000000000000002,FamiliarScore:286.25,UnknownScore:5.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:plan,DetailType:PERSONAL,DetailRawText:I have a plan,PersonalScore:1.0000000000000002,FamiliarScore:295.25,UnknownScore:4.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:plan,DetailType:PERSONAL,DetailRawText:I have a plan,PersonalScore:1.0000000000000002,FamiliarScore:306.5,UnknownScore:2.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:plan,DetailType:PERSONAL,DetailRawText:I have a plan,PersonalScore:1.0000000000000002,FamiliarScore:315.5,UnknownScore:1.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:plan,DetailType:PERSONAL,DetailRawText:I have a plan,PersonalScore:1.0000000000000002,FamiliarScore:324.5,UnknownScore:-0.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:plan,DetailType:PERSONAL,DetailRawText:I have a plan,PersonalScore:1.0000000000000002,FamiliarScore:333.5,UnknownScore:-2.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:plan,DetailType:PERSONAL,DetailRawText:I have a plan,PersonalScore:1.0000000000000002,FamiliarScore:342.5,UnknownScore:-3.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:plan,DetailType:PERSONAL,DetailRawText:I have a plan,PersonalScore:1.0000000000000002,FamiliarScore:351.5,UnknownScore:-5.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:plan,DetailType:PERSONAL,DetailRawText:I have a plan,PersonalScore:1.0000000000000002,FamiliarScore:360.5,UnknownScore:-6.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:plan,DetailType:PERSONAL,DetailRawText:I have a plan,PersonalScore:1.0000000000000002,FamiliarScore:369.5,UnknownScore:-8.0,SentimentScore:0.0</detail>
+
+ObjectName:love
+	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is love,PersonalScore:0.0,FamiliarScore:17.5,UnknownScore:10.0,SentimentScore:0.6369</detail>
+	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is love,PersonalScore:0.0,FamiliarScore:36.0,UnknownScore:8.5,SentimentScore:0.6369</detail>
+	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is love,PersonalScore:0.0,FamiliarScore:42.75,UnknownScore:7.0,SentimentScore:0.6369</detail>
+	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is love,PersonalScore:0.0,FamiliarScore:49.5,UnknownScore:5.5,SentimentScore:0.6369</detail>
+	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is love,PersonalScore:0.0,FamiliarScore:69.75,UnknownScore:4.0,SentimentScore:0.6369</detail>
+	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is love,PersonalScore:0.0,FamiliarScore:76.5,UnknownScore:2.5,SentimentScore:0.6369</detail>
+	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is love,PersonalScore:0.0,FamiliarScore:83.25,UnknownScore:1.0,SentimentScore:0.6369</detail>
+	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is love,PersonalScore:0.0,FamiliarScore:90.0,UnknownScore:-0.5,SentimentScore:0.6369</detail>
+	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is love,PersonalScore:0.0,FamiliarScore:96.75,UnknownScore:-2.0,SentimentScore:0.6369</detail>
+
+ObjectName:coding
+	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is coding,PersonalScore:0.0,FamiliarScore:15.25,UnknownScore:10.0,SentimentScore:0.0</detail>
+
+ObjectName:do
+	<detail>BranchLevel:1,DetailName:do,DetailType:PERSONAL,DetailRawText:How do you do coding,PersonalScore:0.6499999999999999,FamiliarScore:65.25,UnknownScore:10.0,SentimentScore:0.0</detail>
+
+ObjectName:mark
+	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:Who is mark,PersonalScore:0.0,FamiliarScore:4.0,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:like,DetailType:GENERIC,DetailRawText:What does mark like,PersonalScore:0.0,FamiliarScore:18.0,UnknownScore:10.0,SentimentScore:0.3612</detail>
+	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:Who is mark,PersonalScore:0.0,FamiliarScore:27.0,UnknownScore:8.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:who is mark,PersonalScore:0.0,FamiliarScore:29.25,UnknownScore:7.0,SentimentScore:0.0</detail>
+
+ObjectName:Mark
+	<detail>BranchLevel:1,DetailName:like,DetailType:GENERIC,DetailRawText:What does Mark like,PersonalScore:0.0,FamiliarScore:8.5,UnknownScore:10.0,SentimentScore:0.3612</detail>
+	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:Who is Mark,PersonalScore:0.0,FamiliarScore:20.25,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:Who is Mark,PersonalScore:0.0,FamiliarScore:31.5,UnknownScore:8.5,SentimentScore:0.0</detail>
+
+ObjectName:academy
+	<detail>BranchLevel:1,DetailName:location,DetailType:GENERIC,DetailRawText:What is the location of the academy ,PersonalScore:0.0,FamiliarScore:261.0,UnknownScore:10.0,SentimentScore:0.0</detail>

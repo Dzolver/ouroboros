@@ -95,3 +95,79 @@
 {"object_name":"apples","detail_name":heard,"detail_line_num":10,"raw_text:"Have you heard of apples}
 {"object_name":"apples","detail_name":heard,"detail_line_num":11,"raw_text:"Have you heard of apples}
 {"object_name":"apples","detail_name":heard,"detail_line_num":12,"raw_text:"Have you heard of apples}
+{"object_name":"Buwaneka","detail_name":coding,"detail_line_num":19,"raw_text:"Buwaneka loves coding}
+{"object_name":"apples","detail_name":heard,"detail_line_num":13,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":14,"raw_text:"Have you heard of apples}
+{"object_name":"apples","detail_name":heard,"detail_line_num":15,"raw_text:"Have you heard of apples}
+{"object_name":"tea","detail_name":heard,"detail_line_num":26,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":27,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":28,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":29,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":30,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":31,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":32,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":33,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":34,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":35,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":36,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":37,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":38,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":39,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":40,"raw_text:"Have you heard of tea}
+{"object_name":"USER","detail_name":tea,"detail_line_num":44,"raw_text:"I love tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":41,"raw_text:"Have you heard of tea}
+{"object_name":"USER","detail_name":tea,"detail_line_num":46,"raw_text:"I love tea}
+{"object_name":"mark","detail_name":like,"detail_line_num":59,"raw_text:"What does mark like}
+{"object_name":"love","detail_name":is,"detail_line_num":50,"raw_text:"What is love}
+{"object_name":"tea","detail_name":heard,"detail_line_num":42,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":43,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":44,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":45,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":46,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":47,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":48,"raw_text:"Have you heard of tea}
+{"object_name":"USER","detail_name":today,"detail_line_num":54,"raw_text:"I went to the college today}
+{"object_name":"USER","detail_name":today,"detail_line_num":55,"raw_text:"I got to the cafe on time today}
+{"object_name":"love","detail_name":is,"detail_line_num":60,"raw_text:"What is love}
+{"object_name":"love","detail_name":is,"detail_line_num":61,"raw_text:"What is love}
+{"object_name":"USER","detail_name":apples,"detail_line_num":56,"raw_text:"I think apples are expensive}
+{"object_name":"Mark","detail_name":is,"detail_line_num":76,"raw_text:"Who is Mark}
+{"object_name":"mark","detail_name":is,"detail_line_num":73,"raw_text:"Who is mark}
+{"object_name":"Mark","detail_name":is,"detail_line_num":78,"raw_text:"Who is Mark}
+{"object_name":"mark","detail_name":is,"detail_line_num":74,"raw_text:"who is mark}
+{"object_name":"USER","detail_name":tea,"detail_line_num":57,"raw_text:"I like tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":49,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":50,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":51,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":52,"raw_text:"Have you heard of tea}
+{"object_name":"love","detail_name":is,"detail_line_num":68,"raw_text:"What is love}
+{"object_name":"tea","detail_name":heard,"detail_line_num":53,"raw_text:"Have you heard of tea}
+{"object_name":"love","detail_name":is,"detail_line_num":70,"raw_text:"What is love}
+{"object_name":"love","detail_name":is,"detail_line_num":71,"raw_text:"What is love}
+{"object_name":"love","detail_name":is,"detail_line_num":72,"raw_text:"What is love}
+{"object_name":"love","detail_name":is,"detail_line_num":73,"raw_text:"What is love}
+{"object_name":"tea","detail_name":heard,"detail_line_num":54,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":55,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":56,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":57,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":58,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":59,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":60,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":61,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":62,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":63,"raw_text:"Have you heard of tea}
+{"object_name":"tea","detail_name":heard,"detail_line_num":64,"raw_text:"Have you heard of tea}
+{"object_name":"USER","detail_name":plan,"detail_line_num":74,"raw_text:"I have a plan}
+{"object_name":"USER","detail_name":plan,"detail_line_num":75,"raw_text:"I have a plan}
+{"object_name":"USER","detail_name":plan,"detail_line_num":76,"raw_text:"I have a plan}
+{"object_name":"USER","detail_name":plan,"detail_line_num":77,"raw_text:"I have a plan}
+{"object_name":"USER","detail_name":plan,"detail_line_num":78,"raw_text:"I have a plan}
+{"object_name":"tea","detail_name":heard,"detail_line_num":65,"raw_text:"Have you heard of tea}
+{"object_name":"USER","detail_name":plan,"detail_line_num":80,"raw_text:"I have a plan}
+{"object_name":"USER","detail_name":plan,"detail_line_num":81,"raw_text:"I have a plan}
+{"object_name":"USER","detail_name":plan,"detail_line_num":82,"raw_text:"I have a plan}
+{"object_name":"USER","detail_name":plan,"detail_line_num":83,"raw_text:"I have a plan}
+{"object_name":"USER","detail_name":plan,"detail_line_num":84,"raw_text:"I have a plan}
+{"object_name":"USER","detail_name":plan,"detail_line_num":85,"raw_text:"I have a plan}
+{"object_name":"USER","detail_name":plan,"detail_line_num":86,"raw_text:"I have a plan}
+{"object_name":"USER","detail_name":plan,"detail_line_num":87,"raw_text:"I have a plan}

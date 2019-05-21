@@ -3,6 +3,8 @@ from nltk import word_tokenize
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from sklearn.feature_extraction.text import CountVectorizer
 import requests
+import nltk
+from nltk.corpus import wordnet
 import json
 import flaskBoi
 import webbrowser
@@ -386,6 +388,7 @@ class BrainCalculator:
             print('LOCAL MEMORY = ' + str(local_memory))
             return response
         elif not question:
+            final_word_bank = self.apply_weights(generated_word_bank,question,sentence,object_name,detail_name)
             return response
 
     def get_local_memory(self,noun_pool):
@@ -418,8 +421,17 @@ class BrainCalculator:
         r = requests.get(url=URL,params=payload)
         server_memory = r.text
         split1 = server_memory.split(',')
+        print("SPLIT1:" + str(split1))
+        print(split1[0])
         split2 = []
         for split in split1:
+            if len(split1) == 0:
+                split2 = []
+                break
+            elif split1[0] == '[]':
+                split2 = []
+                break
+            else:
                 split2.append(split.split("'")[1])
         print("SPLIT2:" + str(split2))
         final_server_memory = split2
@@ -568,6 +580,76 @@ class BrainCalculator:
         word_bank.append(MD_pool)
         word_bank.append(WRB_pool)
         return word_bank
+
+    def apply_weights(self,word_bank,question,sentence,object_name,detail_name):
+        final_word_bank = []
+
+        print("LENGTH: " + str(len(word_bank)))
+        banana_split = sentence.split(" ")
+        print("BANANA : " + str(banana_split))
+        print(object_name)
+        print(detail_name)
+        for i in range(0,10):
+            if len(word_bank[i]) == 0:
+                continue
+
+            for j,word in enumerate(word_bank[i]):
+                print(j)
+                print(word)
+                if word not in banana_split:
+                    word_bank[i].pop(j)
+            if i < 10:
+                i += 1
+        print("NEW WORD BANK : "+str(word_bank))
+        sim_v, sim_s = self.find_synonyms('plan',type='noun')
+        print(str(sim_v))
+        print(str(sim_s))
+        if question:
+            #apply weightage to pronouns, verbs and question intent
+            print("")
+        elif not question:
+            #apply weightage to nouns, verbs and question types
+            print("")
+
+        return final_word_bank
+    def find_synonyms(self,word,type):
+        syns = wordnet.synsets(str(word))
+        if type == 'noun':
+            params = str(word)+'.n.01'
+            w1 = wordnet.synset(params)
+            sim_max = 0.0
+            n_max = ''
+            fsim_score = 0.0
+            for n in syns:
+                sim_score = w1.wup_similarity(n)
+                if sim_score is None:
+                    break
+                else:
+                    fsim_score = float(sim_score)
+                if fsim_score == 1.0:
+                    continue
+                if fsim_score > sim_max:
+                    sim_max = fsim_score
+                    n_max = n
+            return n_max,sim_max
+        elif type == 'verb':
+            params = str(word)+'.v.01'
+            w1 = wordnet.synset(params)
+            sim_max = 0
+            v_max = 0
+            fsim_score = 0.0
+            for v in syns:
+                sim_score = w1.wup_similarity(v)
+                if sim_score is None:
+                    break
+                else:
+                    fsim_score = float(sim_score)
+                if fsim_score == 1.0:
+                    continue
+                if fsim_score > sim_max:
+                    sim_max = fsim_score
+                    v_max = v
+            return v_max,sim_max
 
     def connect_components(self):
         return self

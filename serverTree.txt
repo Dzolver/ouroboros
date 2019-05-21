@@ -4,7 +4,7 @@ ObjectName:apples
     <detail>BranchLevel:1,DetailName:green,DetailType:GENERIC,DetailRawText:green apples are sour,PersonalScore:-0.6000000000000001,FamiliarScore:-2.75,UnknownScore:10.0,SentimentScore:-0.5423</detail>
 
 ObjectName:USER
-	<detail>BranchLevel:1,DetailName:apples,DetailType:PERSONAL,DetailRawText:I hate apples,PersonalScore:0.85,FamiliarScore:-5.0,UnknownScore:10.0,SentimentScore:-0.5719</detail>
+	<detail>BranchLevel:1,DetailName:apples,Deta    ilType:PERSONAL,DetailRawText:I hate apples,PersonalScore:0.85,FamiliarScore:-5.0,UnknownScore:10.0,SentimentScore:-0.5719</detail>
 	<detail>BranchLevel:1,DetailName:tea,DetailType:PERSONAL,DetailRawText:I love tea,PersonalScore:0.85,FamiliarScore:6.25,UnknownScore:10.0,SentimentScore:0.6369</detail>
 	<detail>BranchLevel:1,DetailName:father,DetailType:PERSONAL,DetailRawText:I miss my father,PersonalScore:0.85,FamiliarScore:6.25,UnknownScore:10.0,SentimentScore:0.6369</detail>
 
