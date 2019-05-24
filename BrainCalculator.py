@@ -3,11 +3,17 @@ from nltk import word_tokenize
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from sklearn.feature_extraction.text import CountVectorizer
 import requests
+from nltk.stem.wordnet import WordNetLemmatizer
 import nltk
 from nltk.corpus import wordnet
+import language_check
 import json
 import flaskBoi
 import webbrowser
+import grammar_check
+from language_check import LanguageTool
+from nltk import bigrams
+import operator
 
 java_path = "C:/Program Files/Java/jdk-12/bin/java.exe"
 os.environ['JAVAHOME'] = java_path
@@ -17,6 +23,7 @@ _path_to_model = 'stanfordPOSTagger/models/english-bidirectional-distsim.tagger'
 _path_to_jar = 'stanfordPOSTagger/stanford-postagger.jar'
 _path_to_tree = 'localTree.txt'
 from nltk.tag import StanfordPOSTagger
+
 
 st = StanfordPOSTagger(_path_to_model,_path_to_jar,encoding='utf8')
 
@@ -31,6 +38,8 @@ class BrainCalculator:
     semantic_score = 0
     global_noun_pool = []
     question = False
+    tool = language_check.LanguageTool('en-US')
+
     def __init__(self,object_name,detail_name,branch_level,personality_score,understanding_score,unknown_score,sentence,semantic_score):
         self.object_name = object_name
         self.detail_name = detail_name
@@ -387,9 +396,95 @@ class BrainCalculator:
             local_memory = self.get_local_memory(noun_pool)
             print('LOCAL MEMORY = ' + str(local_memory))
             return response
+
         elif not question:
+            pronouns = []
+            nouns = []
+            verbs = []
+            adjectives = []
+            wrb = []
             final_word_bank = self.apply_weights(generated_word_bank,question,sentence,object_name,detail_name)
+            #segment everything into question words, nouns and verbs
+            question_starters = ['Did','How','When','Where','How','Can','Is','What','Should','Could','Would']
+            wp = ['Who','What']
+            wdt = ['Which']
+            wp_doll = ['Whose']
+            wrb = ['Where','When','How']
+            md = ['Can','Could','Will','Should','Would']
+            q_connect = ['Was','Did','Is']
+            q_connect_2 = ['An','A','It']
+
+            q_past = []
+            q_present = [wdt]
+            q_future = [md]
+            q_pro = [wp,wp_doll]
+            q_where = [wrb]
+            self_perspective = False
+            reverse_perspective = False
+            sentence_bank = []
+
+            if 'I' in sentence.split(" "):
+                self_perspective = True
+                pronouns.append('I')
+            if len(final_word_bank[0]) != 0:
+                pronouns = final_word_bank[0]
+                sentence_bank.append(pronouns)
+            if len(final_word_bank[1]) != 0:
+                nouns = final_word_bank[1]
+                sentence_bank.append(nouns)
+            if len(final_word_bank[2]) != 0:
+                verbs = final_word_bank[2]
+                sentence_bank.append(verbs)
+            if len(final_word_bank[3]) != 0:
+                adjectives = final_word_bank[3]
+                sentence_bank.append(adjectives)
+            if len(final_word_bank[6]) != 0:
+                for verb in final_word_bank[6]:
+                    verbs.append(WordNetLemmatizer().lemmatize(verb,'v'))
+                sentence_bank.append(verbs)
+            if len(final_word_bank[7]) != 0:
+                for verb in final_word_bank[7]:
+                    verbs.append(WordNetLemmatizer().lemmatize(verb,'v'))
+                sentence_bank.append(verb)
+            if len(final_word_bank[9]) != 0:
+                wrb = final_word_bank[9]
+                sentence_bank.append(wrb)
+            print(pronouns)
+            print(verbs)
+            print(nouns)
+            print(adjectives)
+            print(wrb)
+
+            sentence_RAW = str(pronouns[0] + " "+ verbs[0] + " "+nouns[0])
+            matches = self.tool.check(sentence_RAW)
+            print(matches)
+            print(language_check.correct(sentence_RAW,matches))
+            sentence_tier2 = []
+            for i,question_starter in enumerate(question_starters):
+                sentence_tier2.append(question_starters[i]+ " " + sentence_RAW)
+            print(sentence_tier2)
+            tool = grammar_check.LanguageTool('en-GB')
+            matches = tool.check(str(sentence_tier2[0]))
+            print(matches)
+            print(grammar_check.correct(str(sentence_tier2[0]), matches))
+            print(self.get_sentence_tense(self.justTAG(sentence)))
+            #assign gravity to each set
+            #combine set gravities into composite gravities for noun verb pairs
+            #combine set gravities into composite gravities for question noun verb triplets
+            #filter out final gravity sequence
             return response
+    def get_sentence_tense(self,sentencePOSTag):
+        tenses = dict()
+        present = 0
+        past = 0
+        future = 0
+        for pos,tag in sentencePOSTag:
+            if tag == 'VBP' or tag == 'VBG' or tag == 'VBZ' or tag == 'VB':
+                present += 1
+            elif tag == 'VBN' or tag == 'VBD':
+                past += 1
+        tenses = {'past':past,'present':present,'future':future}
+        return max(tenses.items(),key=operator.itemgetter(1))[0]
 
     def get_local_memory(self,noun_pool):
         #for word in noun_pool:
@@ -571,6 +666,7 @@ class BrainCalculator:
         word_bank.append(pronoun_pool)
         word_bank.append(noun_pool)
         word_bank.append(verb_pool)
+        word_bank.append(adjectives_pool)
         word_bank.append(WP_pool)
         word_bank.append(VRB_pool)
         word_bank.append(simple_verb_pool)
@@ -592,7 +688,6 @@ class BrainCalculator:
         for i in range(0,10):
             if len(word_bank[i]) == 0:
                 continue
-
             for j,word in enumerate(word_bank[i]):
                 print(j)
                 print(word)
@@ -611,7 +706,8 @@ class BrainCalculator:
             #apply weightage to nouns, verbs and question types
             print("")
 
-        return final_word_bank
+        return word_bank
+
     def find_synonyms(self,word,type):
         syns = wordnet.synsets(str(word))
         if type == 'noun':

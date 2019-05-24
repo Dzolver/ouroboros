@@ -171,3 +171,48 @@
 {"object_name":"USER","detail_name":plan,"detail_line_num":85,"raw_text:"I have a plan}
 {"object_name":"USER","detail_name":plan,"detail_line_num":86,"raw_text:"I have a plan}
 {"object_name":"USER","detail_name":plan,"detail_line_num":87,"raw_text:"I have a plan}
+{"object_name":"USER","detail_name":college,"detail_line_num":88,"raw_text:"I went to college}
+{"object_name":"USER","detail_name":today,"detail_line_num":89,"raw_text:"I went to college today}
+{"object_name":"USER","detail_name":today,"detail_line_num":90,"raw_text:"I went to college today}
+{"object_name":"USER","detail_name":today,"detail_line_num":91,"raw_text:"I went to college today}
+{"object_name":"USER","detail_name":today,"detail_line_num":92,"raw_text:"I went to college today}
+{"object_name":"love","detail_name":is,"detail_line_num":104,"raw_text:"What is love}
+{"object_name":"tea","detail_name":heard,"detail_line_num":66,"raw_text:"Have you heard of tea}
+{"object_name":"Mark","detail_name":oranges,"detail_line_num":123,"raw_text:"Mark loves oranges}
+{"object_name":"USER","detail_name":Mark,"detail_line_num":94,"raw_text:"I met Mark at college today}
+{"object_name":"USER","detail_name":college,"detail_line_num":95,"raw_text:"I went to college}
+{"object_name":"USER","detail_name":today,"detail_line_num":96,"raw_text:"I went to college today}
+{"object_name":"tea","detail_name":heard,"detail_line_num":67,"raw_text:"Have you heard of tea}
+{"object_name":"Anne","detail_name":pizza,"detail_line_num":137,"raw_text:"Anne thinks that pizza is expensive}
+{"object_name":"USER","detail_name":pizza,"detail_line_num":98,"raw_text:"I think pizza is expensive}
+{"object_name":"USER","detail_name":pizza,"detail_line_num":99,"raw_text:"I think that pizza is expensive}
+{"object_name":"USER","detail_name":college,"detail_line_num":100,"raw_text:"I went to college late}
+{"object_name":"USER","detail_name":college,"detail_line_num":101,"raw_text:"I went to college early}
+{"object_name":"USER","detail_name":today,"detail_line_num":102,"raw_text:"I went to college early today}
+{"object_name":"USER","detail_name":college,"detail_line_num":103,"raw_text:"I went to college early}
+{"object_name":"USER","detail_name":Anne,"detail_line_num":104,"raw_text:"I met Anne at college}
+{"object_name":"Brian","detail_name":Anne,"detail_line_num":148,"raw_text:"Anne does not like Brian}
+{"object_name":"Brian","detail_name":Anne,"detail_line_num":149,"raw_text:"Anne does not like Brian}
+{"object_name":"USER","detail_name":engineering,"detail_line_num":105,"raw_text:"I study software engineering}
+{"object_name":"Anne","detail_name":engineering,"detail_line_num":146,"raw_text:"Anne studies software engineering}
+{"object_name":"USER","detail_name":engineering,"detail_line_num":106,"raw_text:"I study software engineering}
+{"object_name":"Brian","detail_name":engineering,"detail_line_num":153,"raw_text:"Brian studies software engineering}
+{"object_name":"USER","detail_name":today,"detail_line_num":107,"raw_text:"I went to college today}
+{"object_name":"Mark","detail_name":today,"detail_line_num":138,"raw_text:"Mark went to college today}
+{"object_name":"USER","detail_name":today,"detail_line_num":108,"raw_text:"I went to college today}
+{"object_name":"USER","detail_name":today,"detail_line_num":109,"raw_text:"I went to college today}
+{"object_name":"USER","detail_name":today,"detail_line_num":110,"raw_text:"I went to college today}
+{"object_name":"USER","detail_name":today,"detail_line_num":111,"raw_text:"I went to college today}
+{"object_name":"Mark","detail_name":college,"detail_line_num":143,"raw_text:"Mark goes to college}
+{"object_name":"USER","detail_name":plan,"detail_line_num":112,"raw_text:"I have a plan}
+{"object_name":"USER","detail_name":today,"detail_line_num":113,"raw_text:"I went to college today}
+{"object_name":"USER","detail_name":today,"detail_line_num":114,"raw_text:"I went to college today}
+{"object_name":"USER","detail_name":college,"detail_line_num":115,"raw_text:"I went to college}
+{"object_name":"USER","detail_name":today,"detail_line_num":116,"raw_text:"I went to college today}
+{"object_name":"USER","detail_name":today,"detail_line_num":117,"raw_text:"I went to college today}
+{"object_name":"apples","detail_name":know,"detail_line_num":16,"raw_text:"What do you know about apples ?}
+{"object_name":"USER","detail_name":apples,"detail_line_num":119,"raw_text:"I really enjoy eating apples}
+{"object_name":"Brian","detail_name":lot,"detail_line_num":169,"raw_text:"Brian bullies me a lot}
+{"object_name":"favor","detail_name":do,"detail_line_num":176,"raw_text:"Can you do me a favor?}
+{"object_name":"USER","detail_name":buy,"detail_line_num":120,"raw_text:"should I buy this}
+{"object_name":"USER","detail_name":Brian,"detail_line_num":121,"raw_text:"I met Brian at college today}

@@ -14,6 +14,7 @@ ObjectName:apples
 	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:103.5,UnknownScore:-3.5,SentimentScore:0.0</detail>
 	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:114.75,UnknownScore:-5.0,SentimentScore:0.0</detail>
 	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of apples,PersonalScore:0.8000000000000002,FamiliarScore:126.0,UnknownScore:-6.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:know,DetailType:PERSONAL,DetailRawText:What do you know about apples ?,PersonalScore:0.9500000000000002,FamiliarScore:524.75,UnknownScore:10.0,SentimentScore:0.0</detail>
 
 ObjectName:pizza
 	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is pizza,PersonalScore:0.0,FamiliarScore:-0.5,UnknownScore:10.0,SentimentScore:0.0</detail>
@@ -64,6 +65,8 @@ ObjectName:tea
 	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:544.5,UnknownScore:-47.0,SentimentScore:0.0</detail>
 	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:555.75,UnknownScore:-48.5,SentimentScore:0.0</detail>
 	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:567.0,UnknownScore:-50.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:578.25,UnknownScore:-51.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:heard,DetailType:PERSONAL,DetailRawText:Have you heard of tea,PersonalScore:0.8000000000000002,FamiliarScore:589.5,UnknownScore:-53.0,SentimentScore:0.0</detail>
 
 ObjectName:USER
 	<detail>BranchLevel:1,DetailName:tea,DetailType:PERSONAL,DetailRawText:I love tea,PersonalScore:0.85,FamiliarScore:45.0,UnknownScore:-20.0,SentimentScore:0.6369</detail>
@@ -86,6 +89,37 @@ ObjectName:USER
 	<detail>BranchLevel:1,DetailName:plan,DetailType:PERSONAL,DetailRawText:I have a plan,PersonalScore:1.0000000000000002,FamiliarScore:351.5,UnknownScore:-5.0,SentimentScore:0.0</detail>
 	<detail>BranchLevel:1,DetailName:plan,DetailType:PERSONAL,DetailRawText:I have a plan,PersonalScore:1.0000000000000002,FamiliarScore:360.5,UnknownScore:-6.5,SentimentScore:0.0</detail>
 	<detail>BranchLevel:1,DetailName:plan,DetailType:PERSONAL,DetailRawText:I have a plan,PersonalScore:1.0000000000000002,FamiliarScore:369.5,UnknownScore:-8.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:college,DetailType:SECRET,DetailRawText:I went to college,PersonalScore:1.5000000000000002,FamiliarScore:103.0,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:SECRET,DetailRawText:I went to college today,PersonalScore:1.7500000000000002,FamiliarScore:116.5,UnknownScore:7.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:SECRET,DetailRawText:I went to college today,PersonalScore:1.7500000000000002,FamiliarScore:127.75,UnknownScore:5.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:SECRET,DetailRawText:I went to college today,PersonalScore:1.7500000000000002,FamiliarScore:139.0,UnknownScore:4.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:SECRET,DetailRawText:I went to college today,PersonalScore:1.7500000000000002,FamiliarScore:150.25,UnknownScore:2.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:Mark,DetailType:SECRET,DetailRawText:I met Mark at college today,PersonalScore:2.0,FamiliarScore:193.5,UnknownScore:2.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:college,DetailType:SECRET,DetailRawText:I went to college,PersonalScore:1.5000000000000002,FamiliarScore:163.75,UnknownScore:8.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:SECRET,DetailRawText:I went to college today,PersonalScore:1.7500000000000002,FamiliarScore:188.5,UnknownScore:1.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:pizza,DetailType:PERSONAL,DetailRawText:I think pizza is expensive,PersonalScore:1.1500000000000001,FamiliarScore:204.75,UnknownScore:8.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:pizza,DetailType:PERSONAL,DetailRawText:I think that pizza is expensive,PersonalScore:1.2999999999999998,FamiliarScore:222.75,UnknownScore:6.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:college,DetailType:SECRET,DetailRawText:I went to college late,PersonalScore:1.7500000000000002,FamiliarScore:190.75,UnknownScore:7.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:college,DetailType:SECRET,DetailRawText:I went to college early,PersonalScore:1.7500000000000002,FamiliarScore:199.75,UnknownScore:5.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:SECRET,DetailRawText:I went to college early today,PersonalScore:2.0,FamiliarScore:229.0,UnknownScore:-0.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:college,DetailType:SECRET,DetailRawText:I went to college early,PersonalScore:1.7500000000000002,FamiliarScore:222.25,UnknownScore:4.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:Anne,DetailType:SECRET,DetailRawText:I met Anne at college,PersonalScore:1.7500000000000002,FamiliarScore:229.5,UnknownScore:6.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:engineering,DetailType:SECRET,DetailRawText:I study software engineering,PersonalScore:1.5000000000000002,FamiliarScore:145.75,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:engineering,DetailType:SECRET,DetailRawText:I study software engineering,PersonalScore:1.5000000000000002,FamiliarScore:161.5,UnknownScore:8.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:SECRET,DetailRawText:I went to college today,PersonalScore:1.7500000000000002,FamiliarScore:265.0,UnknownScore:-2.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:SECRET,DetailRawText:I went to college today,PersonalScore:1.7500000000000002,FamiliarScore:287.5,UnknownScore:-3.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:SECRET,DetailRawText:I went to college today,PersonalScore:1.7500000000000002,FamiliarScore:298.75,UnknownScore:-5.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:SECRET,DetailRawText:I went to college today,PersonalScore:1.7500000000000002,FamiliarScore:310.0,UnknownScore:-6.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:SECRET,DetailRawText:I went to college today,PersonalScore:1.7500000000000002,FamiliarScore:321.25,UnknownScore:-8.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:plan,DetailType:PERSONAL,DetailRawText:I have a plan,PersonalScore:1.0000000000000002,FamiliarScore:537.5,UnknownScore:-9.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:SECRET,DetailRawText:I went to college today,PersonalScore:1.7500000000000002,FamiliarScore:341.5,UnknownScore:-9.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:SECRET,DetailRawText:I went to college today,PersonalScore:1.7500000000000002,FamiliarScore:352.75,UnknownScore:-11.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:college,DetailType:SECRET,DetailRawText:I went to college,PersonalScore:1.5000000000000002,FamiliarScore:325.75,UnknownScore:2.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:SECRET,DetailRawText:I went to college today,PersonalScore:1.7500000000000002,FamiliarScore:373.0,UnknownScore:-12.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:SECRET,DetailRawText:I went to college today,PersonalScore:1.7500000000000002,FamiliarScore:384.25,UnknownScore:-14.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:apples,DetailType:PERSONAL,DetailRawText:I really enjoy eating apples,PersonalScore:1.2500000000000002,FamiliarScore:222.75,UnknownScore:-23.5,SentimentScore:0.5413</detail>
+	<detail>BranchLevel:1,DetailName:buy,DetailType:PERSONAL,DetailRawText:should I buy this,PersonalScore:1.25,FamiliarScore:188.5,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:Brian,DetailType:SECRET,DetailRawText:I met Brian at college today,PersonalScore:2.0,FamiliarScore:375.75,UnknownScore:0.0,SentimentScore:0.0</detail>
 
 ObjectName:love
 	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is love,PersonalScore:0.0,FamiliarScore:17.5,UnknownScore:10.0,SentimentScore:0.6369</detail>
@@ -97,6 +131,7 @@ ObjectName:love
 	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is love,PersonalScore:0.0,FamiliarScore:83.25,UnknownScore:1.0,SentimentScore:0.6369</detail>
 	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is love,PersonalScore:0.0,FamiliarScore:90.0,UnknownScore:-0.5,SentimentScore:0.6369</detail>
 	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is love,PersonalScore:0.0,FamiliarScore:96.75,UnknownScore:-2.0,SentimentScore:0.6369</detail>
+	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is love,PersonalScore:0.0,FamiliarScore:103.5,UnknownScore:-3.5,SentimentScore:0.6369</detail>
 
 ObjectName:coding
 	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:What is coding,PersonalScore:0.0,FamiliarScore:15.25,UnknownScore:10.0,SentimentScore:0.0</detail>
@@ -114,6 +149,43 @@ ObjectName:Mark
 	<detail>BranchLevel:1,DetailName:like,DetailType:GENERIC,DetailRawText:What does Mark like,PersonalScore:0.0,FamiliarScore:8.5,UnknownScore:10.0,SentimentScore:0.3612</detail>
 	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:Who is Mark,PersonalScore:0.0,FamiliarScore:20.25,UnknownScore:10.0,SentimentScore:0.0</detail>
 	<detail>BranchLevel:1,DetailName:is,DetailType:GENERIC,DetailRawText:Who is Mark,PersonalScore:0.0,FamiliarScore:31.5,UnknownScore:8.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:oranges,DetailType:GENERIC,DetailRawText:Mark loves oranges,PersonalScore:0.0,FamiliarScore:4.5,UnknownScore:10.0,SentimentScore:0.5719</detail>
+	<detail>BranchLevel:1,DetailName:today,DetailType:GENERIC,DetailRawText:Mark went to college today,PersonalScore:0.0,FamiliarScore:126.0,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:college,DetailType:GENERIC,DetailRawText:Mark goes to college,PersonalScore:0.0,FamiliarScore:99.0,UnknownScore:10.0,SentimentScore:0.0</detail>
 
 ObjectName:academy
 	<detail>BranchLevel:1,DetailName:location,DetailType:GENERIC,DetailRawText:What is the location of the academy ,PersonalScore:0.0,FamiliarScore:261.0,UnknownScore:10.0,SentimentScore:0.0</detail>
+
+ObjectName:Pizza
+	<detail>BranchLevel:1,DetailName:good,DetailType:GENERIC,DetailRawText:Pizza is so good,PersonalScore:0.0,FamiliarScore:274.0,UnknownScore:10.0,SentimentScore:0.5777</detail>
+
+ObjectName:Anne
+	<detail>BranchLevel:1,DetailName:pizza,DetailType:GENERIC,DetailRawText:Anne thinks that pizza is expensive,PersonalScore:0.0,FamiliarScore:45.0,UnknownScore:8.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:pizza,DetailType:GENERIC,DetailRawText:Anne thinks that pizza is expensive,PersonalScore:0.0,FamiliarScore:70.25,UnknownScore:6.5,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:engineering,DetailType:GENERIC,DetailRawText:Anne studies software engineering,PersonalScore:0.0,FamiliarScore:11.25,UnknownScore:10.0,SentimentScore:0.0</detail>
+
+ObjectName:Brian
+	<detail>BranchLevel:1,DetailName:pizza,DetailType:GENERIC,DetailRawText:Brian thinks that pizza is expensive,PersonalScore:0.0,FamiliarScore:56.25,UnknownScore:8.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:Anne,DetailType:GENERIC,DetailRawText:Anne does not like Brian,PersonalScore:0.0,FamiliarScore:16.25,UnknownScore:6.0,SentimentScore:-0.2755</detail>
+	<detail>BranchLevel:1,DetailName:Anne,DetailType:GENERIC,DetailRawText:Anne does not like Brian,PersonalScore:0.0,FamiliarScore:27.5,UnknownScore:4.5,SentimentScore:-0.2755</detail>
+	<detail>BranchLevel:1,DetailName:engineering,DetailType:GENERIC,DetailRawText:Brian studies software engineering,PersonalScore:0.0,FamiliarScore:18.0,UnknownScore:10.0,SentimentScore:0.0</detail>
+	<detail>BranchLevel:1,DetailName:lot,DetailType:PERSONAL,DetailRawText:Brian bullies me a lot,PersonalScore:1.25,FamiliarScore:663.0,UnknownScore:10.0,SentimentScore:0.0</detail>
+
+ObjectName:are
+	<detail>BranchLevel:1,DetailName:bad,DetailType:GENERIC,DetailRawText:This are bad,PersonalScore:-0.4,FamiliarScore:13.0,UnknownScore:10.0,SentimentScore:-0.5423</detail>
+
+ObjectName:favor
+	<detail>BranchLevel:1,DetailName:do,DetailType:SECRET,DetailRawText:Can you do me a favor ?,PersonalScore:3.5,FamiliarScore:802.5,UnknownScore:8.0,SentimentScore:0.4019</detail>
+	<detail>BranchLevel:1,DetailName:do,DetailType:SECRET,DetailRawText:Can you do me a favor?,PersonalScore:3.5,FamiliarScore:812.5,UnknownScore:6.5,SentimentScore:0.4019</detail>
+
+ObjectName:possible
+	<detail>BranchLevel:1,DetailName:this,DetailType:GENERIC,DetailRawText:How is this possible,PersonalScore:0.0,FamiliarScore:60.25,UnknownScore:10.0,SentimentScore:0.0</detail>
+
+ObjectName:hurt
+	<detail>BranchLevel:1,DetailName:Did,DetailType:PERSONAL,DetailRawText:Did it hurt,PersonalScore:1.0,FamiliarScore:-5.0,UnknownScore:10.0,SentimentScore:-0.5267</detail>
+
+ObjectName:expensive
+	<detail>BranchLevel:1,DetailName:it,DetailType:PERSONAL,DetailRawText:Is it expensive,PersonalScore:1.0,FamiliarScore:10.75,UnknownScore:10.0,SentimentScore:0.0</detail>
+
+ObjectName:concert
+	<detail>BranchLevel:1,DetailName:was,DetailType:GENERIC,DetailRawText:Where was the concert ?,PersonalScore:0.0,FamiliarScore:8.5,UnknownScore:10.0,SentimentScore:0.0</detail>
