@@ -84,17 +84,8 @@ def assignPoints(wordStruct):
 def check_for_greetings(sentence):
     for word in sentence.split(' '):
         if word.lower() in Greets:
-            return random.choice(Responses)
-        else:
-            sig_max_value = max(assignPoints(input_defrag(sentence)))
-            ##sig_word = find_sig(sig_max_value,assignPoints(input_defrag(sentence)),sentence)
-            sentenceStruct = input_defrag(sentence)
-            sig_word = sentenceStruct[maxPos]
-            #(sig_max_value)
-            if find_whether_adjective(sig_word):
-                print(sig_word + ' is an adjective! ')
-                continue
-            return sig_word + " ? "
+            return True
+
 def find_simple_object(posTAGs):
     max = 0
     maxPos = 0
@@ -298,7 +289,9 @@ if __name__ == '__main__':
         if 'bye' in sentence:
             print('Ouroboros: Good Bye!')
             break
-
+        elif check_for_greetings(sentence) is True:
+            print('Ouroboros: '+str(random.choice(Responses)) + '!')
+            continue
         object_name = 'TEST'
         branch_level = 1
         detail_name = 'Byung'
@@ -323,9 +316,9 @@ if __name__ == '__main__':
                     response = "Can you tell me more about " + str(object_name) + " ? "
                 elif obj_found:
                     response = "What about " + str(object_name) + " ? "
-
             else:
-                personal, sig_max_value, maxPos, detail_name, personal_array, list_of_scores = find_sig_max_value(brainiac.justTAG(sentence))
+                tagged_sentence = brainiac.justTAG(sentence)
+                personal, sig_max_value, maxPos, detail_name, personal_array, list_of_scores = find_sig_max_value(tagged_sentence)
                 print("THIS IS THE LOCAL CANDIDATE " + localCandidate[0])
                 prime_candidate = brainiac.generate_object_candidates(sentence, localCandidate[0])
                 print("PRIME CANDIDATE : " + prime_candidate)
@@ -342,6 +335,7 @@ if __name__ == '__main__':
                     print(CSTATUS+"This is a positive input!"+CEND)
                 else:
                     print(CSTATUS+"This is a neutral input!"+CEND)
+                treeObject.create_relation(tagged_sentence)
                 #find_important_noun(sentence)
                 #calculates and retrieves an initial score for both object and detail candidates
 
@@ -380,7 +374,7 @@ if __name__ == '__main__':
                     #treeObject.show_object_nodes()
 
                 generated_response = brainiac.generate_response(sentence,object_name,detail_name,check_question(sentence),personal_score,fam_score,unknown_score,sentiment_score,detail_array)
-        print(COUTPUT + "Ouroboros: " + str(response) + CEND)
+        print(COUTPUT + "Ouroboros: " + str(generated_response) + CEND)
         #process = subprocess.Popen("sudo gnome-terminal -- python ouroServer.py",stdout = subprocess.PIPE,stderr=None,shell=True)
         #clear to get ready for new input
         localCandidate.clear()

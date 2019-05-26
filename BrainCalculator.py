@@ -38,6 +38,7 @@ class BrainCalculator:
     semantic_score = 0
     global_noun_pool = []
     question = False
+    change_topic = False
     tool = language_check.LanguageTool('en-US')
 
     def __init__(self,object_name,detail_name,branch_level,personality_score,understanding_score,unknown_score,sentence,semantic_score):
@@ -259,6 +260,14 @@ class BrainCalculator:
             all_details += detail_array
         print("ALL DETAILS")
 
+    def check_if_new(self,sentence):
+        with open('localTree.txt','r') as t:
+            all_lines = t.readlines()
+            for line in all_lines:
+                component = self.rawTextFinder(4,(line.strip()).split(","))
+                if sentence == str(component):
+                    return True
+
     def generate_response(self,sentence,object_name,detail_name,question,p_score,f_score,u_score,s_score,detail_array):
         response = ""
         object_score = 0
@@ -396,7 +405,6 @@ class BrainCalculator:
             local_memory = self.get_local_memory(noun_pool)
             print('LOCAL MEMORY = ' + str(local_memory))
             return response
-
         elif not question:
             pronouns = []
             nouns = []
@@ -466,13 +474,20 @@ class BrainCalculator:
             tool = grammar_check.LanguageTool('en-GB')
             matches = tool.check(str(sentence_tier2[0]))
             print(matches)
-            print(grammar_check.correct(str(sentence_tier2[0]), matches))
+            response = grammar_check.correct(str(sentence_tier2[0]), matches)
             print(self.get_sentence_tense(self.justTAG(sentence)))
             #assign gravity to each set
             #combine set gravities into composite gravities for noun verb pairs
             #combine set gravities into composite gravities for question noun verb triplets
             #filter out final gravity sequence
             return response
+    def cook_with_tense(self,word,tense):
+        new_tense_word = ''
+        if tense == "past":
+            #convert to present
+            new_tense_word = WordNetLemmatizer().lemmatize(word,'v')
+        return new_tense_word
+
     def get_sentence_tense(self,sentencePOSTag):
         tenses = dict()
         present = 0
@@ -566,6 +581,10 @@ class BrainCalculator:
         MD_pool = []
         WRB_pool = []
         WP_pool = []
+        relations = []
+        with open('relations.txt','r') as r:
+            relations = r.readlines()
+
         for memory in total_memory:
             for entry in self.justTAG(memory):
                 pos = entry[0]
