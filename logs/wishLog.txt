@@ -216,3 +216,19 @@
 {"object_name":"favor","detail_name":do,"detail_line_num":176,"raw_text:"Can you do me a favor?}
 {"object_name":"USER","detail_name":buy,"detail_line_num":120,"raw_text:"should I buy this}
 {"object_name":"USER","detail_name":Brian,"detail_line_num":121,"raw_text:"I met Brian at college today}
+{"object_name":"USER","detail_name":today,"detail_line_num":122,"raw_text:"I went to college today}
+{"object_name":"USER","detail_name":today,"detail_line_num":123,"raw_text:"I went to college today}
+{"object_name":"Anne","detail_name":college,"detail_line_num":167,"raw_text:"Anne goes to college}
+{"object_name":"Anne","detail_name":college,"detail_line_num":168,"raw_text:"Anne goes to college}
+{"object_name":"Brian","detail_name":college,"detail_line_num":176,"raw_text:"Brian goes to college}
+{"object_name":"USER","detail_name":today,"detail_line_num":124,"raw_text:"I went to college today}
+{"object_name":"USER","detail_name":today,"detail_line_num":125,"raw_text:"I went to college today}
+{"object_name":"USER","detail_name":today,"detail_line_num":126,"raw_text:"I went to college today}
+{"object_name":"Anne","detail_name":pizza,"detail_line_num":172,"raw_text:"Anne thinks that pizza is expensive}
+{"object_name":"Anne","detail_name":today,"detail_line_num":173,"raw_text:"Anne went to college today}
+{"object_name":"USER","detail_name":today,"detail_line_num":2,"raw_text:"I went to eat pizza today}
+{"object_name":"USER","detail_name":Anne,"detail_line_num":3,"raw_text:"I met Anne at college today}
+{"object_name":"USER","detail_name":Matthew,"detail_line_num":4,"raw_text:"I think Matthew is stupid}
+{"object_name":"USER","detail_name":college,"detail_line_num":5,"raw_text:"I just came back from college}
+{"object_name":"college","detail_name":busy,"detail_line_num":9,"raw_text:"college was pretty busy}
+{"object_name":"USER","detail_name":engineering,"detail_line_num":6,"raw_text:"I study software engineering}

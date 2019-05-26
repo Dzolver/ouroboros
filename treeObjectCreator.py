@@ -63,6 +63,26 @@ class TreeObjectCreator:
             r.close()
         return self
 
+    def create_relation(self,TAGG):
+        relation = []
+        for pos,tag in TAGG:
+            if tag == 'NN' or tag == 'NNS' or tag == 'NNP' or tag == 'NNPS' or pos == "I":
+                if pos == "I":
+                    rel = "USER"
+                else:
+                    rel = pos
+                if len(relation) < 2:
+                    relation.append(rel)
+                else:
+                    break
+        if len(relation) < 2:
+            return relation
+        else:
+            with open("relations.txt",'a') as r:
+                r.write(str(relation[0])+','+str(relation[1])+'\n')
+            r.close()
+        return relation
+
     def check_object_node(self,object_name):
         objfound = False
         with open("localTree.txt","r") as t:
